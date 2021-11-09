@@ -222,6 +222,9 @@
         "dbp/relay-checkin-bundle": [
             "1.0"
         ],
+        "dbp/relay-core-bundle": [
+            "0.1"
+        ],
         "dbp/relay-greenlight-bundle": [
             "0.1"
         ]
