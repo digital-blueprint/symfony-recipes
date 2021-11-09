@@ -6,6 +6,6 @@
         "config/": "%CONFIG_DIR%/"
     },
     "env": {
-        "EU_DCC_DATABASE_URL": "mysql://db:secret@mariadb:3306/db?serverVersion=mariadb-10.3.30"
+        "GREENLIGHT_DATABASE_URL": "mysql://db:secret@mariadb:3306/db?serverVersion=mariadb-10.3.30"
     }
 }

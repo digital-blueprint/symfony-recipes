@@ -1,2 +1,2 @@
 dbp_relay_greenlight:
-  database_url: '%env(EU_DCC_DATABASE_URL)%'
+  database_url: '%env(GREENLIGHT_DATABASE_URL)%'
