@@ -7,6 +7,6 @@ Repository of the Digital Blueprint.
 It will be used by the [Frontend Starter App](https://gitlab.tugraz.at/dbp/web-components/dbp-starter-app)
 as additional Symfony Flex Repository.
 
-The original Symfony Flex Repository of Symfony is locatged here:
+The original Symfony Flex Repository of Symfony is located here:
 https://github.com/symfony/recipes/
 
