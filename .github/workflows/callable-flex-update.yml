@@ -1,9 +1,21 @@
 name: Update Flex endpoint
 
 on:
+    workflow_dispatch:
+        inputs:
+            branch:
+                default: main
+                required: false
+                type: string
+            contrib:
+                required: false
+                type: boolean
+            versions_json:
+                required: false
+                type: string
     push:
         branches:
-            - master
+            - main
         inputs:
             branch:
                 default: main
