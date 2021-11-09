@@ -1,0 +1,15 @@
+{
+    "bundles": {
+        "Dbp\\Relay\\oreBundle\\DbpRelayCoreBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "CORE_API_BUILDINFO": "unknown",
+        "CORE_API_BUILDINFO_URL": "#",
+        "CORE_LOCK_DSN": "redis://redis:6379/",
+        "CORE_QUEUE_DSN": "redis://redis:6379/"
+
+    }
+}

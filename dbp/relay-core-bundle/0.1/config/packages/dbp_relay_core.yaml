@@ -1,0 +1,5 @@
+dbp_relay_core:
+  build_info: '%env(CORE_API_BUILDINFO)%'
+  build_info_url: '%env(CORE_API_BUILDINFO_URL)%'
+  queue_dsn: '%env(CORE_QUEUE_DSN)%'
+  lock_dsn: '%env(CORE_LOCK_DSN)%'
