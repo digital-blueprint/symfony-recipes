@@ -2,35 +2,9 @@ name: Update Flex endpoint
 
 on:
     workflow_dispatch:
-        inputs:
-            branch:
-                default: main
-                required: false
-                type: string
-            contrib:
-                default: .
-                required: false
-                type: boolean
-            versions_json:
-                default: .github/versions.json
-                required: false
-                type: string
     push:
         branches:
             - main
-        inputs:
-            branch:
-                default: main
-                required: false
-                type: string
-            contrib:
-                default: .
-                required: false
-                type: boolean
-            versions_json:
-                default: .github/versions.json
-                required: false
-                type: string
 
 jobs:
     flex-update:
