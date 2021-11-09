@@ -1,0 +1,3 @@
+dbp_relay_checkin:
+  campus_qr_url: '%env(CAMPUS_QR_URL)%'
+  campus_qr_token: '%env(CAMPUS_QR_TOKEN)%'

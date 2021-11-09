@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Dbp\\Relay\\CheckinBundle\\DbpRelayCheckinBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "CAMPUS_QR_URL": "https://campusqr.domain",
+        "CAMPUS_QR_TOKEN": ""
+    }
+}
