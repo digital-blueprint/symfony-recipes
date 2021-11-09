@@ -11,20 +11,20 @@
                     "config/": "%CONFIG_DIR%/"
                 },
                 "env": {
-                    "EU_DCC_DATABASE_URL": "mysql://db:secret@mariadb:3306/db?serverVersion=mariadb-10.3.30"
+                    "GREENLIGHT_DATABASE_URL": "mysql://db:secret@mariadb:3306/db?serverVersion=mariadb-10.3.30"
                 }
             },
             "files": {
                 "config/packages/dbp_relay_greenlight.yaml": {
                     "contents": [
                         "dbp_relay_greenlight:",
-                        "  database_url: '%env(EU_DCC_DATABASE_URL)%'",
+                        "  database_url: '%env(GREENLIGHT_DATABASE_URL)%'",
                         ""
                     ],
                     "executable": false
                 }
             },
-            "ref": "95cb9efa1425ec615456c83e0f84ad274d8e2432"
+            "ref": "8cd05e867d86802196e52a8cdf7c1d9b375076eb"
         }
     }
 }
