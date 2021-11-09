@@ -61,6 +61,8 @@ jobs:
                 run: |
                     mkdir .github/flex-endpoint
                     git ls-tree HEAD */*/* | php .github/recipes-checker-main/run generate:flex-endpoint ${{ github.repository }} main flex/main .github/flex-endpoint .github/versions.json
+                    ls .github/flex-endpoint
+                    tree
                     git switch flex/main
                     git rm -q *.json
                     mv .github/flex-endpoint/*.json .
