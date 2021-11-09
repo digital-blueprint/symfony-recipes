@@ -1,0 +1,32 @@
+{
+    "manifests": {
+        "dbp/relay-checkin-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Dbp\\Relay\\CheckinBundle\\DbpRelayCheckinBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "CAMPUS_QR_URL": "https://campusqr.domain",
+                    "CAMPUS_QR_TOKEN": ""
+                }
+            },
+            "files": {
+                "config/packages/dbp_relay_checkin.yaml": {
+                    "contents": [
+                        "dbp_relay_checkin:",
+                        "  campus_qr_url: '%env(CAMPUS_QR_URL)%'",
+                        "  campus_qr_token: '%env(CAMPUS_QR_TOKEN)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "8e7ebb6891066b50a754d27f88493d11d0e88957"
+        }
+    }
+}
