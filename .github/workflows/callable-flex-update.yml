@@ -1,7 +1,9 @@
 name: Update Flex endpoint
 
 on:
-    workflow_call:
+    push:
+        branches:
+            - master
         inputs:
             branch:
                 default: main

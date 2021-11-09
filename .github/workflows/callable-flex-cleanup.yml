@@ -1,7 +1,8 @@
 name: Cleanup Flex testing endpoint
 
 on:
-    workflow_call:
+    pull_request_target:
+        types: [ closed ]
 
 jobs:
     flex-cleanup:

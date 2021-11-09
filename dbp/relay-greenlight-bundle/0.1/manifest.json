@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "Dbp\\Relay\\GreenlightBundle\\DbpRelayGreenlightBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "EU_DCC_DATABASE_URL": "mysql://db:secret@mariadb:3306/db?serverVersion=mariadb-10.3.30"
+    }
+}
