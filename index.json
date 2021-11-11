@@ -219,6 +219,9 @@
         "zulipnotifier": "symfony/zulip-notifier"
     },
     "recipes": {
+        "dbp/relay-campusonline-bundle": [
+            "0.1"
+        ],
         "dbp/relay-checkin-bundle": [
             "1.0"
         ],
