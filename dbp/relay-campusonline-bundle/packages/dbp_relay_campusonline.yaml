@@ -1,0 +1,4 @@
+dbp_relay_campusonline:
+  co_oauth2_ucardapi_api_url: '%env(CAMPUS_ONLINE_OAUTH2_API_URL)%'
+  co_oauth2_ucardapi_client_id: '%env(CAMPUS_ONLINE_OAUTH2_CLIENT_ID)%'
+  co_oauth2_ucardapi_client_secret: '%env(CAMPUS_ONLINE_OAUTH2_CLIENT_SECRET)%'

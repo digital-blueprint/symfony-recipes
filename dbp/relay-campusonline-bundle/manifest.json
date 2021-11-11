@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "Dbp\\Relay\\CampusonlineBundle\\DbpRelayCampusonlineBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "CAMPUS_ONLINE_OAUTH2_API_URL": "https://campusonline.domain",
+        "CAMPUS_ONLINE_OAUTH2_CLIENT_ID": "",
+        "CAMPUS_ONLINE_OAUTH2_CLIENT_SECRET": ""
+    }
+}
