@@ -17,7 +17,7 @@
                 }
             },
             "files": {
-                "packages/dbp_relay_campusonline.yaml": {
+                "config/packages/dbp_relay_campusonline.yaml": {
                     "contents": [
                         "dbp_relay_campusonline:",
                         "  co_oauth2_ucardapi_api_url: '%env(CAMPUS_ONLINE_OAUTH2_API_URL)%'",
@@ -28,7 +28,7 @@
                     "executable": false
                 }
             },
-            "ref": "698679d7ab658d671219c728fdf02b116a4a6195"
+            "ref": "ea9d0af44dbe68d664c8f36d3ca9cbba9f3252cd"
         }
     }
 }
