@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "Dbp\\Relay\\oreBundle\\DbpRelayCoreBundle": ["all"]
+        "Dbp\\Relay\\CoreBundle\\DbpRelayCoreBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
