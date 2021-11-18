@@ -3,7 +3,7 @@
         "dbp/relay-core-bundle": {
             "manifest": {
                 "bundles": {
-                    "Dbp\\Relay\\oreBundle\\DbpRelayCoreBundle": [
+                    "Dbp\\Relay\\CoreBundle\\DbpRelayCoreBundle": [
                         "all"
                     ]
                 },
@@ -30,7 +30,7 @@
                     "executable": false
                 }
             },
-            "ref": "1eab26c1d87b104809ee56b597d67249e1642df0"
+            "ref": "d03e655fa1f726593be781f194a5084f99c7c47d"
         }
     }
 }
