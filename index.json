@@ -18,6 +18,9 @@
         ],
         "dbp/relay-greenlight-bundle": [
             "0.1"
+        ],
+        "dbp/relay-greenlight-connector-campusonline-bundle": [
+            "0.1"
         ]
     },
     "versions": [],
@@ -26,6 +29,6 @@
     "_links": {
         "repository": "github.com/digital-blueprint/symfony-recipes",
         "origin_template": "{package}:{version}@github.com/digital-blueprint/symfony-recipes:main",
-        "recipe_template": "https://api.github.com/repos/digital-blueprint/symfony-recipes/contents/{package_dotted}.{version}.json?ref=flex/main"
+        "recipe_template": "https://raw.githubusercontent.com/digital-blueprint/symfony-recipes/flex/main/{package_dotted}.{version}.json"
     }
 }
