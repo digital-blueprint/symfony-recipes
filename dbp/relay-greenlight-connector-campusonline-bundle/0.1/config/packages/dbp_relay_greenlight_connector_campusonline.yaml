@@ -1,0 +1,20 @@
+dbp_relay_greenlight_connector_campusonline:
+  campusonline:
+    # The base URL of the CO instance
+    api_url:              '%env(GREENLIGHT_CONNECTOR_CAMPUSONLINE_API_URL)%' # Example: 'https://online.mycampus.org/campus_online'
+
+    # The OAuth2 client ID
+    client_id:            '%env(GREENLIGHT_CONNECTOR_CAMPUSONLINE_CLIENT_ID)%' # Example: my-client
+
+    # The OAuth2 client secret
+    client_secret:        '%env(GREENLIGHT_CONNECTOR_CAMPUSONLINE_CLIENT_SECRET)%' # Example: my-secret
+
+    # The dataservice name of the ucardfoto service in case the default isn't used
+    dataservice:          '%env(GREENLIGHT_CONNECTOR_CAMPUSONLINE_DATASERVICE, "brm.pm.extension.ucardfoto")%'
+  ldap:
+    host:                 '%env(GREENLIGHT_CONNECTOR_CAMPUSONLINE_LDAP_HOST)%'
+    base_dn:              '%env(GREENLIGHT_CONNECTOR_CAMPUSONLINE_LDAP_BASE_DN)%'
+    username:             '%env(GREENLIGHT_CONNECTOR_CAMPUSONLINE_LDAP_USERNAME)%'
+    password:             '%env(GREENLIGHT_CONNECTOR_CAMPUSONLINE_LDAP_PASSWORD)%'
+    identifier_attribute: '%env(GREENLIGHT_CONNECTOR_CAMPUSONLINE_LDAP_IDENTIFIER_ATTRIBUTE)%'
+    co_ident_nr_obfuscated_attribute: '%env(GREENLIGHT_CONNECTOR_CAMPUSONLINE_LDAP_CO_IDENT_NR_OBFUSCATED_ATTRIBUTE)%'

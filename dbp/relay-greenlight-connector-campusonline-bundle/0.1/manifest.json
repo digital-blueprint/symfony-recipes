@@ -1,0 +1,20 @@
+{
+    "bundles": {
+        "Dbp\\Relay\\GreenlightConnectorCampusonlineBundle\\DbpRelayGreenlightConnectorCampusonlineBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "GREENLIGHT_CONNECTOR_CAMPUSONLINE_API_URL": "https://campusonline.your.domain",
+        "GREENLIGHT_CONNECTOR_CAMPUSONLINE_CLIENT_ID": "client-id",
+        "GREENLIGHT_CONNECTOR_CAMPUSONLINE_CLIENT_SECRET": "secret",
+        "GREENLIGHT_CONNECTOR_CAMPUSONLINE_DATASERVICE": "brm.pm.extension.ucardfoto",
+        "GREENLIGHT_CONNECTOR_CAMPUSONLINE_LDAP_HOST": "directory.your.domain",
+        "GREENLIGHT_CONNECTOR_CAMPUSONLINE_LDAP_BASE_DN": "ou=users,o=uni",
+        "GREENLIGHT_CONNECTOR_CAMPUSONLINE_LDAP_USERNAME": "cn=your_api,o=uni",
+        "GREENLIGHT_CONNECTOR_CAMPUSONLINE_LDAP_PASSWORD": "secret",
+        "GREENLIGHT_CONNECTOR_CAMPUSONLINE_LDAP_IDENTIFIER_ATTRIBUTE": "cn",
+        "GREENLIGHT_CONNECTOR_CAMPUSONLINE_LDAP_CO_IDENT_NR_OBFUSCATED_ATTRIBUTE": "co-obfuscated-c-ident"
+    }
+}
