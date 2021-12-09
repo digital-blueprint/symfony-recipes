@@ -11,7 +11,7 @@
                     "config/": "%CONFIG_DIR%/"
                 },
                 "env": {
-                    "GREENLIGHT_DATABASE_URL": "mysql://db:secret@mariadb:3306/db?serverVersion=mariadb-10.3.30"
+                    "GREENLIGHT_DATABASE_URL": "mysql://db:secret@mariadb:3306/db"
                 }
             },
             "files": {
@@ -24,7 +24,7 @@
                     "executable": false
                 }
             },
-            "ref": "8cd05e867d86802196e52a8cdf7c1d9b375076eb"
+            "ref": "2acb031eb36a1dcfd8afd18375e1e7bc7aa3dbb6"
         }
     }
 }
