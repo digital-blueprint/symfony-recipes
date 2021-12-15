@@ -6,6 +6,6 @@
         "config/": "%CONFIG_DIR%/"
     },
     "env": {
-        "GREENLIGHT_DATABASE_URL": "mysql://db:secret@mariadb:3306/db"
+        "GREENLIGHT_DATABASE_URL": "mysql://user:secret@mariadb:3306/db"
     }
 }
