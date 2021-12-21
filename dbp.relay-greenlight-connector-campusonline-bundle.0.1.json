@@ -14,7 +14,6 @@
                     "GREENLIGHT_CONNECTOR_CAMPUSONLINE_API_URL": "https://campusonline.your.domain",
                     "GREENLIGHT_CONNECTOR_CAMPUSONLINE_CLIENT_ID": "client-id",
                     "GREENLIGHT_CONNECTOR_CAMPUSONLINE_CLIENT_SECRET": "secret",
-                    "GREENLIGHT_CONNECTOR_CAMPUSONLINE_DATASERVICE": "brm.pm.extension.ucardfoto",
                     "GREENLIGHT_CONNECTOR_CAMPUSONLINE_LDAP_HOST": "directory.your.domain",
                     "GREENLIGHT_CONNECTOR_CAMPUSONLINE_LDAP_BASE_DN": "ou=users,o=uni",
                     "GREENLIGHT_CONNECTOR_CAMPUSONLINE_LDAP_USERNAME": "cn=your_api,o=uni",
@@ -37,8 +36,11 @@
                         "    # The OAuth2 client secret",
                         "    client_secret:        '%env(GREENLIGHT_CONNECTOR_CAMPUSONLINE_CLIENT_SECRET)%' # Example: my-secret",
                         "",
-                        "    # The dataservice name of the ucardfoto service in case the default isn't used",
-                        "    dataservice:          '%env(GREENLIGHT_CONNECTOR_CAMPUSONLINE_DATASERVICE, \"brm.pm.extension.ucardfoto\")%'",
+                        "    # An optional mapping of dataservice IDs to their replacements",
+                        "    # dataservice_override:",
+                        "    #  - name: 'brm.pm.extension.ucardfoto'",
+                        "    #    replacement: '%env(GREENLIGHT_CONNECTOR_CAMPUSONLINE_DATASERVICE)%'",
+                        "",
                         "  ldap:",
                         "    host:                 '%env(GREENLIGHT_CONNECTOR_CAMPUSONLINE_LDAP_HOST)%'",
                         "    base_dn:              '%env(GREENLIGHT_CONNECTOR_CAMPUSONLINE_LDAP_BASE_DN)%'",
@@ -51,7 +53,7 @@
                     "executable": false
                 }
             },
-            "ref": "df82d6fd76d7efc1167c127f7ab2508920c28e16"
+            "ref": "808ce2d324ad82712a07cf658c6b4703f54b069a"
         }
     }
 }
