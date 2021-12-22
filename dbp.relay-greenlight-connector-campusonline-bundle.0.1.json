@@ -47,13 +47,13 @@
                         "    username:             '%env(GREENLIGHT_CONNECTOR_CAMPUSONLINE_LDAP_USERNAME)%'",
                         "    password:             '%env(GREENLIGHT_CONNECTOR_CAMPUSONLINE_LDAP_PASSWORD)%'",
                         "    identifier_attribute: '%env(GREENLIGHT_CONNECTOR_CAMPUSONLINE_LDAP_IDENTIFIER_ATTRIBUTE)%'",
-                        "    co_ident_nr_obfuscated_attribute: '%env(GREENLIGHT_CONNECTOR_CAMPUSONLINE_LDAP_CO_IDENT_NR_OBFUSCATED_ATTRIBUTE)%'",
-                        ""
+                        "    co_identifier_attributes:",
+                        "      ident_nr_obfuscated: '%env(GREENLIGHT_CONNECTOR_CAMPUSONLINE_LDAP_CO_IDENT_NR_OBFUSCATED_ATTRIBUTE)%'"
                     ],
                     "executable": false
                 }
             },
-            "ref": "808ce2d324ad82712a07cf658c6b4703f54b069a"
+            "ref": "ae41374684d8bd265835b7b9874358983ae4c59e"
         }
     }
 }
