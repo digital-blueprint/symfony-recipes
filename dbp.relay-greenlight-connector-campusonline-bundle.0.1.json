@@ -48,12 +48,15 @@
                         "    password:             '%env(GREENLIGHT_CONNECTOR_CAMPUSONLINE_LDAP_PASSWORD)%'",
                         "    identifier_attribute: '%env(GREENLIGHT_CONNECTOR_CAMPUSONLINE_LDAP_IDENTIFIER_ATTRIBUTE)%'",
                         "    co_identifier_attributes:",
-                        "      ident_nr_obfuscated: '%env(GREENLIGHT_CONNECTOR_CAMPUSONLINE_LDAP_CO_IDENT_NR_OBFUSCATED_ATTRIBUTE)%'"
+                        "      ident_nr_obfuscated: '%env(GREENLIGHT_CONNECTOR_CAMPUSONLINE_LDAP_CO_IDENT_NR_OBFUSCATED_ATTRIBUTE)%'",
+                        "      # ident_nr: '%env(GREENLIGHT_CONNECTOR_CAMPUSONLINE_LDAP_CO_IDENT_NR_ATTRIBUTE)%'",
+                        "      # person_nr: '%env(GREENLIGHT_CONNECTOR_CAMPUSONLINE_LDAP_CO_PERSON_NR_ATTRIBUTE)%'",
+                        ""
                     ],
                     "executable": false
                 }
             },
-            "ref": "ae41374684d8bd265835b7b9874358983ae4c59e"
+            "ref": "2df68145242bcc488378a7565032c20acb826cb6"
         }
     }
 }
