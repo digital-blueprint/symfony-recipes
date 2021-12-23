@@ -19,7 +19,7 @@ dbp_relay_greenlight_connector_campusonline:
     base_dn:              '%env(GREENLIGHT_CONNECTOR_CAMPUSONLINE_LDAP_BASE_DN)%'
     username:             '%env(GREENLIGHT_CONNECTOR_CAMPUSONLINE_LDAP_USERNAME)%'
     password:             '%env(GREENLIGHT_CONNECTOR_CAMPUSONLINE_LDAP_PASSWORD)%'
-    identifier_attribute: '%env(GREENLIGHT_CONNECTOR_CAMPUSONLINE_LDAP_IDENTIFIER_ATTRIBUTE)%'
+    identifier_attribute: '%env(GREENLIGHT_CONNECTOR_CAMPUSONLINE_LDAP_USER_IDENTIFIER_ATTRIBUTE)%'
     co_identifier_attributes:
       person_nr: '%env(GREENLIGHT_CONNECTOR_CAMPUSONLINE_LDAP_CO_PERSON_NR_ATTRIBUTE)%'
       ident_nr_obfuscated: '%env(GREENLIGHT_CONNECTOR_CAMPUSONLINE_LDAP_CO_IDENT_NR_OBFUSCATED_ATTRIBUTE)%'
