@@ -1,6 +1,8 @@
 DBP Symfony Recipes
 ===================
 
+[GitHub](https://github.com/digital-blueprint/symfony-recipes)
+
 This is the [Symfony Flex](https://symfony.com/doc/current/quick_tour/flex_recipes.html)
 Repository of the Digital Blueprint.
 
