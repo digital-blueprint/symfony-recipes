@@ -1,0 +1,19 @@
+{
+    "bundles": {
+        "Dbp\\Relay\\BasePersonConnectorLdapBundle\\DbpRelayBasePersonConnectorLdapBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "LDAP_PERSON_PROVIDER_LDAP_HOST": "directory.your.domain",
+        "LDAP_PERSON_PROVIDER_LDAP_USERNAME": "cn=ralay,o=uni",
+        "LDAP_PERSON_PROVIDER_LDAP_BASE_DN": "o=uni",
+        "LDAP_PERSON_PROVIDER_LDAP_PASSWORD": "",
+        "LDAP_PERSON_PROVIDER_LDAP_ATTRIBUTE_IDENTIFIER": "cn",
+        "LDAP_PERSON_PROVIDER_LDAP_ATTRIBUTE_GIVEN_NAME": "givenName",
+        "LDAP_PERSON_PROVIDER_LDAP_ATTRIBUTE_FAMILY_NAME": "sn",
+        "LDAP_PERSON_PROVIDER_LDAP_ATTRIBUTE_EMAIL": "mail",
+        "LDAP_PERSON_PROVIDER_LDAP_ATTRIBUTE_BIRTHDAY": "DateOfBirth"
+    }
+}
