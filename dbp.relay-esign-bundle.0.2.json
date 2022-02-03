@@ -1,0 +1,57 @@
+{
+    "manifests": {
+        "dbp/relay-esign-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Dbp\\Relay\\EsignBundle\\DbpRelayEsignBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "PDF_AS_WEB_ADVANCED_URI": "https://pdfas-dev.tugraz.at/pdf-as-web",
+                    "PDF_AS_WEB_QUALIFIED_URI": "https://sig-dev.tugraz.at/pdf-as-web",
+                    "PDF_AS_WEB_QUALIFIED_STATIC_URI": "https://sig-dev.tugraz.at/static",
+                    "PDF_AS_VERIFICATION_ENABLE": "false"
+                }
+            },
+            "files": {
+                "config/packages/dbp_relay_esign.yaml": {
+                    "contents": [
+                        "dbp_relay_esign:",
+                        "    qualified_signature:",
+                        "        server_url: '%env(PDF_AS_WEB_QUALIFIED_URI)%'",
+                        "        callback_url: '%env(PDF_AS_WEB_QUALIFIED_STATIC_URI)%/callback.html'",
+                        "        error_callback_url: '%env(PDF_AS_WEB_QUALIFIED_STATIC_URI)%/error.html'",
+                        "        profiles:",
+                        "            - name: profile1",
+                        "              profile_id: SIGNATUREBLOCK_PROFILE1",
+                        "              user_text_table: usercontent",
+                        "              user_text_row: 1",
+                        "              user_text_attach_parent: main",
+                        "              user_text_attach_child: user",
+                        "              user_text_attach_row: 2",
+                        "              role: ROLE_SCOPE_PROFILE1",
+                        "    advanced_signature:",
+                        "        server_url: '%env(PDF_AS_WEB_ADVANCED_URI)%'",
+                        "        profiles:",
+                        "            - name: profile2",
+                        "              key_id: profile2-key",
+                        "              profile_id: SIGNATUREBLOCK_profile2",
+                        "              user_text_table: usercontent",
+                        "              user_text_row: 1",
+                        "              user_text_attach_parent: main",
+                        "              user_text_attach_child: user",
+                        "              user_text_attach_row: 2",
+                        "              role: ROLE_SCOPE_profile2",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "cac99f7e58e380ee6b1f303a3981fd71e5eb9b16"
+        }
+    }
+}
