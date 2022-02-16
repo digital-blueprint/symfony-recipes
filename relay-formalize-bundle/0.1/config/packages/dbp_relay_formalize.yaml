@@ -1,0 +1,2 @@
+dbp_relay_formalize:
+  database_url: '%env(FORMALIZE_DATABASE_URL)%'
