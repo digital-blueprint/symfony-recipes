@@ -20,6 +20,9 @@
         "dbp/relay-esign-bundle": [
             "0.2"
         ],
+        "dbp/relay-formalize-bundle": [
+            "0.1"
+        ],
         "dbp/relay-greenlight-bundle": [
             "0.1"
         ],
