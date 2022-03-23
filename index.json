@@ -30,6 +30,7 @@
             "0.1"
         ]
     },
+    "recipe-conflicts": [],
     "versions": [],
     "branch": "main",
     "is_contrib": false,
@@ -37,6 +38,8 @@
         "repository": "github.com/digital-blueprint/symfony-recipes",
         "origin_template": "{package}:{version}@github.com/digital-blueprint/symfony-recipes:main",
         "recipe_template": "https://raw.githubusercontent.com/digital-blueprint/symfony-recipes/flex/main/{package_dotted}.{version}.json",
-        "archived_recipes_template": "https://raw.githubusercontent.com/digital-blueprint/symfony-recipes/flex/main/archived/{package_dotted}/{ref}.json"
+        "recipe_template_relative": "{package_dotted}.{version}.json",
+        "archived_recipes_template": "https://raw.githubusercontent.com/digital-blueprint/symfony-recipes/flex/main/archived/{package_dotted}/{ref}.json",
+        "archived_recipes_template_relative": "archived/{package_dotted}/{ref}.json"
     }
 }

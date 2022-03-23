@@ -26,7 +26,7 @@
                         "        callback_url: '%env(PDF_AS_WEB_QUALIFIED_STATIC_URI)%/callback.html'",
                         "        error_callback_url: '%env(PDF_AS_WEB_QUALIFIED_STATIC_URI)%/error.html'",
                         "        profiles:",
-                        "            - name: profile1",
+                        "            - name: default",
                         "              profile_id: SIGNATUREBLOCK_PROFILE1",
                         "              user_text_table: usercontent",
                         "              user_text_row: 1",
@@ -37,7 +37,7 @@
                         "    advanced_signature:",
                         "        server_url: '%env(PDF_AS_WEB_ADVANCED_URI)%'",
                         "        profiles:",
-                        "            - name: profile2",
+                        "            - name: official",
                         "              key_id: profile2-key",
                         "              profile_id: SIGNATUREBLOCK_profile2",
                         "              user_text_table: usercontent",
@@ -51,7 +51,7 @@
                     "executable": false
                 }
             },
-            "ref": "cac99f7e58e380ee6b1f303a3981fd71e5eb9b16"
+            "ref": "b2fe999a3c3262a4aca2dfec858c07d6302021ce"
         }
     }
 }
