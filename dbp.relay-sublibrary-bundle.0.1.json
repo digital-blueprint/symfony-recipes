@@ -24,7 +24,7 @@
                 }
             },
             "files": {
-                "config/packages/dbp_relay_formalize.yaml": {
+                "config/packages/dbp_relay_sublibrary.yaml": {
                     "contents": [
                         "dbp_relay_sublibrary:",
                         "    api_url: '%env(ALMA_API_URL)%'",
@@ -45,7 +45,7 @@
                     "executable": false
                 }
             },
-            "ref": "ebaaf29e00bbfdfcbbf5df8c6b8859a9469512db"
+            "ref": "b6cf8d6ac403a2ce8a9bf66365feb299e0fd26fc"
         }
     }
 }
