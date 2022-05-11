@@ -13,6 +13,7 @@
                 "env": {
                     "CORE_API_BUILDINFO": "unknown",
                     "CORE_API_BUILDINFO_URL": "#",
+                    "CORE_API_LOGO_PATH": "bundles/dbprelaycore/logo.png",
                     "CORE_LOCK_DSN": "redis://redis:6379/",
                     "CORE_QUEUE_DSN": "redis://redis:6379/"
                 }
@@ -23,6 +24,7 @@
                         "dbp_relay_core:",
                         "  build_info: '%env(CORE_API_BUILDINFO)%'",
                         "  build_info_url: '%env(CORE_API_BUILDINFO_URL)%'",
+                        "  logo_path: '%env(CORE_API_LOGO_PATH)%'",
                         "  queue_dsn: '%env(CORE_QUEUE_DSN)%'",
                         "  lock_dsn: '%env(CORE_LOCK_DSN)%'",
                         ""
@@ -30,7 +32,7 @@
                     "executable": false
                 }
             },
-            "ref": "d03e655fa1f726593be781f194a5084f99c7c47d"
+            "ref": "aa5c730aa1e208b5caa03f91a85badae025827c4"
         }
     }
 }
