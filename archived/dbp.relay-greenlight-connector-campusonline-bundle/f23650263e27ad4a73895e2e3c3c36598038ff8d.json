@@ -1,0 +1,64 @@
+{
+    "manifests": {
+        "dbp/relay-greenlight-connector-campusonline-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Dbp\\Relay\\GreenlightConnectorCampusonlineBundle\\DbpRelayGreenlightConnectorCampusonlineBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "GREENLIGHT_CONNECTOR_CAMPUSONLINE_API_URL": "https://campusonline.your.domain",
+                    "GREENLIGHT_CONNECTOR_CAMPUSONLINE_CLIENT_ID": "client-id",
+                    "GREENLIGHT_CONNECTOR_CAMPUSONLINE_CLIENT_SECRET": "secret",
+                    "GREENLIGHT_CONNECTOR_CAMPUSONLINE_LDAP_HOST": "directory.your.domain",
+                    "GREENLIGHT_CONNECTOR_CAMPUSONLINE_LDAP_BASE_DN": "ou=users,o=uni",
+                    "GREENLIGHT_CONNECTOR_CAMPUSONLINE_LDAP_USERNAME": "cn=your_api,o=uni",
+                    "GREENLIGHT_CONNECTOR_CAMPUSONLINE_LDAP_PASSWORD": "secret",
+                    "GREENLIGHT_CONNECTOR_CAMPUSONLINE_LDAP_IDENTIFIER_ATTRIBUTE": "cn",
+                    "GREENLIGHT_CONNECTOR_CAMPUSONLINE_LDAP_CO_IDENT_NR_OBFUSCATED_ATTRIBUTE": "co-obfuscated-c-ident",
+                    "#1": "GREENLIGHT_CONNECTOR_CAMPUSONLINE_LDAP_CO_IDENT_NR_ATTRIBUTE=",
+                    "#2": "GREENLIGHT_CONNECTOR_CAMPUSONLINE_LDAP_CO_PERSON_NR_ATTRIBUTE="
+                }
+            },
+            "files": {
+                "config/packages/dbp_relay_greenlight_connector_campusonline.yaml": {
+                    "contents": [
+                        "dbp_relay_greenlight_connector_campusonline:",
+                        "  campusonline:",
+                        "    # The base URL of the CO instance",
+                        "    api_url:              '%env(GREENLIGHT_CONNECTOR_CAMPUSONLINE_API_URL)%' # Example: 'https://online.mycampus.org/campus_online'",
+                        "",
+                        "    # The OAuth2 client ID",
+                        "    client_id:            '%env(GREENLIGHT_CONNECTOR_CAMPUSONLINE_CLIENT_ID)%' # Example: my-client",
+                        "",
+                        "    # The OAuth2 client secret",
+                        "    client_secret:        '%env(GREENLIGHT_CONNECTOR_CAMPUSONLINE_CLIENT_SECRET)%' # Example: my-secret",
+                        "",
+                        "    # An optional mapping of dataservice IDs to their replacements",
+                        "    # dataservice_override:",
+                        "    #  - name: 'brm.pm.extension.ucardfoto'",
+                        "    #    replacement: '%env(GREENLIGHT_CONNECTOR_CAMPUSONLINE_DATASERVICE)%'",
+                        "",
+                        "  ldap:",
+                        "    host:                 '%env(GREENLIGHT_CONNECTOR_CAMPUSONLINE_LDAP_HOST)%'",
+                        "    base_dn:              '%env(GREENLIGHT_CONNECTOR_CAMPUSONLINE_LDAP_BASE_DN)%'",
+                        "    username:             '%env(GREENLIGHT_CONNECTOR_CAMPUSONLINE_LDAP_USERNAME)%'",
+                        "    password:             '%env(GREENLIGHT_CONNECTOR_CAMPUSONLINE_LDAP_PASSWORD)%'",
+                        "    identifier_attribute: '%env(GREENLIGHT_CONNECTOR_CAMPUSONLINE_LDAP_IDENTIFIER_ATTRIBUTE)%'",
+                        "    co_identifier_attributes:",
+                        "      ident_nr_obfuscated: '%env(GREENLIGHT_CONNECTOR_CAMPUSONLINE_LDAP_CO_IDENT_NR_OBFUSCATED_ATTRIBUTE)%'",
+                        "      # ident_nr: '%env(GREENLIGHT_CONNECTOR_CAMPUSONLINE_LDAP_CO_IDENT_NR_ATTRIBUTE)%'",
+                        "      # person_nr: '%env(GREENLIGHT_CONNECTOR_CAMPUSONLINE_LDAP_CO_PERSON_NR_ATTRIBUTE)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "f23650263e27ad4a73895e2e3c3c36598038ff8d"
+        }
+    }
+}

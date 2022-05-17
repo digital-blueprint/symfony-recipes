@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "dbp/relay-greenlight-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Dbp\\Relay\\GreenlightBundle\\DbpRelayGreenlightBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "GREENLIGHT_DATABASE_URL": "mysql://db:secret@mariadb:3306/db?serverVersion=mariadb-10.3.30"
+                }
+            },
+            "files": {
+                "config/packages/dbp_relay_greenlight.yaml": {
+                    "contents": [
+                        "dbp_relay_greenlight:",
+                        "  database_url: '%env(GREENLIGHT_DATABASE_URL)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "8cd05e867d86802196e52a8cdf7c1d9b375076eb"
+        }
+    }
+}

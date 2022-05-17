@@ -1,0 +1,36 @@
+{
+    "manifests": {
+        "dbp/relay-core-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Dbp\\Relay\\oreBundle\\DbpRelayCoreBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "CORE_API_BUILDINFO": "unknown",
+                    "CORE_API_BUILDINFO_URL": "#",
+                    "CORE_LOCK_DSN": "redis://redis:6379/",
+                    "CORE_QUEUE_DSN": "redis://redis:6379/"
+                }
+            },
+            "files": {
+                "config/packages/dbp_relay_core.yaml": {
+                    "contents": [
+                        "dbp_relay_core:",
+                        "  build_info: '%env(CORE_API_BUILDINFO)%'",
+                        "  build_info_url: '%env(CORE_API_BUILDINFO_URL)%'",
+                        "  queue_dsn: '%env(CORE_QUEUE_DSN)%'",
+                        "  lock_dsn: '%env(CORE_LOCK_DSN)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "1eab26c1d87b104809ee56b597d67249e1642df0"
+        }
+    }
+}

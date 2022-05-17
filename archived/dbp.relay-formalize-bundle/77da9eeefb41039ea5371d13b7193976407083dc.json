@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "dbp/relay-formalize-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Dbp\\Relay\\FormalizeBundle\\DbpRelayFormalizeBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "FORMALIZE_DATABASE_URL": "mysql://user:secret@mariadb:3306/db"
+                }
+            },
+            "files": {
+                "config/packages/dbp_relay_formalize.yaml": {
+                    "contents": [
+                        "dbp_relay_formalize:",
+                        "  database_url: '%env(FORMALIZE_DATABASE_URL)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "77da9eeefb41039ea5371d13b7193976407083dc"
+        }
+    }
+}
