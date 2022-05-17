@@ -43,3 +43,14 @@ jobs:
                     git add *.json
                     git commit -m 'Update Flex endpoint' || true
                     git push origin -f flex/main
+
+            -
+                name: Update Flex Archives
+                run: |
+                    mkdir .github/archived
+                    php .github/recipes-checker-main/run generate:archived-recipes . main .github/archived
+                    git switch flex/main
+                    cp -a .github/archived .
+                    git add archived/
+                    git commit -m 'Update Flex archives' || true
+                    git push origin -f flex/main
