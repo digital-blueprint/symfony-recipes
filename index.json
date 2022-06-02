@@ -29,6 +29,9 @@
         "dbp/relay-greenlight-connector-campusonline-bundle": [
             "0.1"
         ],
+        "dbp/relay-maker-bundle": [
+            "0.1"
+        ],
         "dbp/relay-sublibrary-bundle": [
             "0.1"
         ]
