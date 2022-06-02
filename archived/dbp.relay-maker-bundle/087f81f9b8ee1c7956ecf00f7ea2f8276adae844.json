@@ -1,0 +1,15 @@
+{
+    "manifests": {
+        "dbp/relay-maker-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Dbp\\Relay\\MakerBundle\\DbpRelayMakerBundle": [
+                        "all"
+                    ]
+                }
+            },
+            "files": [],
+            "ref": "087f81f9b8ee1c7956ecf00f7ea2f8276adae844"
+        }
+    }
+}
