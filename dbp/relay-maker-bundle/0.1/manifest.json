@@ -1,5 +1,5 @@
 {
     "bundles": {
-        "Dbp\\Relay\\MakerBundle\\DbpRelayMakerBundle": ["dev"]
+        "Dbp\\Relay\\MakerBundle\\DbpRelayMakerBundle": ["all"]
     }
 }
