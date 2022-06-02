@@ -4,12 +4,12 @@
             "manifest": {
                 "bundles": {
                     "Dbp\\Relay\\MakerBundle\\DbpRelayMakerBundle": [
-                        "dev"
+                        "all"
                     ]
                 }
             },
             "files": [],
-            "ref": "8ac04e62b96f595f7557c32016b1497898e911a4"
+            "ref": "087f81f9b8ee1c7956ecf00f7ea2f8276adae844"
         }
     }
 }
