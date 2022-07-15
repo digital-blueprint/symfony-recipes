@@ -17,6 +17,9 @@
         "dbp/relay-core-bundle": [
             "0.1"
         ],
+        "dbp/relay-dispatch-bundle": [
+            "0.1"
+        ],
         "dbp/relay-esign-bundle": [
             "0.2"
         ],
