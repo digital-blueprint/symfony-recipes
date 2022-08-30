@@ -11,7 +11,8 @@
                     "config/": "%CONFIG_DIR%/"
                 },
                 "env": {
-                    "DISPATCH_DATABASE_URL": "mysql://user:secret@mariadb:3306/db"
+                    "DISPATCH_DATABASE_URL": "mysql://user:secret@mariadb:3306/db",
+                    "DISPATCH_SENDER_PROFILE": "enter-sender-profile-here"
                 }
             },
             "files": {
@@ -19,12 +20,13 @@
                     "contents": [
                         "dbp_relay_dispatch:",
                         "  database_url: '%env(DISPATCH_DATABASE_URL)%'",
+                        "  sender_profile: '%env(DISPATCH_SENDER_PROFILE)%'",
                         ""
                     ],
                     "executable": false
                 }
             },
-            "ref": "d5aecc168f8af6acad509463064bb43bd4d3c875"
+            "ref": "7138e0ff6f0aebf3e35555b71c882e3b57e99175"
         }
     }
 }
