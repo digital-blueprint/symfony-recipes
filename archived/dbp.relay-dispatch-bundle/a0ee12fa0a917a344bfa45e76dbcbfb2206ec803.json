@@ -1,0 +1,34 @@
+{
+    "manifests": {
+        "dbp/relay-dispatch-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Dbp\\Relay\\DispatchBundle\\DbpRelayDispatchBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "DISPATCH_DATABASE_URL": "mysql://user:secret@mariadb:3306/db",
+                    "DISPATCH_SENDER_PROFILE": "enter-sender-profile-here",
+                    "DISPATCH_CERT_PASSWORD": "enter-password-here"
+                }
+            },
+            "files": {
+                "config/packages/dbp_relay_dispatch.yaml": {
+                    "contents": [
+                        "dbp_relay_dispatch:",
+                        "  database_url: '%env(DISPATCH_DATABASE_URL)%'",
+                        "  sender_profile: '%env(DISPATCH_SENDER_PROFILE)%'",
+                        "  cert_password: '%env(DISPATCH_CERT_PASSWORD)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "a0ee12fa0a917a344bfa45e76dbcbfb2206ec803"
+        }
+    }
+}
