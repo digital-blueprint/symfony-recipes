@@ -12,7 +12,8 @@
                 },
                 "env": {
                     "DISPATCH_DATABASE_URL": "mysql://user:secret@mariadb:3306/db",
-                    "DISPATCH_SENDER_PROFILE": "enter-sender-profile-here"
+                    "DISPATCH_SENDER_PROFILE": "enter-sender-profile-here",
+                    "DISPATCH_CERT_PASSWORD": "enter-password-here"
                 }
             },
             "files": {
@@ -21,12 +22,13 @@
                         "dbp_relay_dispatch:",
                         "  database_url: '%env(DISPATCH_DATABASE_URL)%'",
                         "  sender_profile: '%env(DISPATCH_SENDER_PROFILE)%'",
+                        "  cert_password: '%env(DISPATCH_CERT_PASSWORD)%'",
                         ""
                     ],
                     "executable": false
                 }
             },
-            "ref": "7138e0ff6f0aebf3e35555b71c882e3b57e99175"
+            "ref": "a0ee12fa0a917a344bfa45e76dbcbfb2206ec803"
         }
     }
 }
