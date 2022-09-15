@@ -2,3 +2,4 @@ dbp_relay_dispatch:
   database_url: '%env(DISPATCH_DATABASE_URL)%'
   sender_profile: '%env(DISPATCH_SENDER_PROFILE)%'
   cert_password: '%env(DISPATCH_CERT_PASSWORD)%'
+  cert_p12: '%env(DISPATCH_CERT_P12)%'

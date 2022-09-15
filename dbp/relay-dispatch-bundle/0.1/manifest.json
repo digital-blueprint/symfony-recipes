@@ -8,6 +8,7 @@
     "env": {
         "DISPATCH_DATABASE_URL": "mysql://user:secret@mariadb:3306/db",
         "DISPATCH_SENDER_PROFILE": "enter-sender-profile-here",
-        "DISPATCH_CERT_PASSWORD": "enter-password-here"
+        "DISPATCH_CERT_PASSWORD": "enter-password-here",
+        "DISPATCH_CERT_P12": "base64-cert-here"
     }
 }
