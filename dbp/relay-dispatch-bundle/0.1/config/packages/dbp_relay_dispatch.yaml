@@ -3,3 +3,7 @@ dbp_relay_dispatch:
   sender_profile: '%env(DISPATCH_SENDER_PROFILE)%'
   cert_password: '%env(DISPATCH_CERT_PASSWORD)%'
   cert_p12: '%env(DISPATCH_CERT_P12)%'
+  base_url: '%env(DISPATCH_BASE_URL)%'
+  delivery_request_url_part: '%env(DISPATCH_DELIVERY_REQUEST_URL_PART)%'
+  pre_addressing_request_url_part: '%env(DISPATCH_PRE_ADDRESSING_REQUEST_URL_PART)%'
+  status_request_url_part: '%env(DISPATCH_STATUS_REQUEST_URL_PART)%'
