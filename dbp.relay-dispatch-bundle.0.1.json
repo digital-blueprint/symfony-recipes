@@ -14,7 +14,11 @@
                     "DISPATCH_DATABASE_URL": "mysql://user:secret@mariadb:3306/db",
                     "DISPATCH_SENDER_PROFILE": "enter-sender-profile-here",
                     "DISPATCH_CERT_PASSWORD": "enter-password-here",
-                    "DISPATCH_CERT_P12": "base64-cert-here"
+                    "DISPATCH_CERT_P12": "base64-cert-here",
+                    "DISPATCH_BASE_URL": "https://dualtest.vendo.at/mprs-core/services10",
+                    "DISPATCH_DELIVERY_REQUEST_URL_PART": "/DDWebServiceProcessor",
+                    "DISPATCH_PRE_ADDRESSING_REQUEST_URL_PART": "/DDAddressingProcessor",
+                    "DISPATCH_STATUS_REQUEST_URL_PART": "/DDPollingServiceProcessor"
                 }
             },
             "files": {
@@ -25,12 +29,16 @@
                         "  sender_profile: '%env(DISPATCH_SENDER_PROFILE)%'",
                         "  cert_password: '%env(DISPATCH_CERT_PASSWORD)%'",
                         "  cert_p12: '%env(DISPATCH_CERT_P12)%'",
+                        "  base_url: '%env(DISPATCH_BASE_URL)%'",
+                        "  delivery_request_url_part: '%env(DISPATCH_DELIVERY_REQUEST_URL_PART)%'",
+                        "  pre_addressing_request_url_part: '%env(DISPATCH_PRE_ADDRESSING_REQUEST_URL_PART)%'",
+                        "  status_request_url_part: '%env(DISPATCH_STATUS_REQUEST_URL_PART)%'",
                         ""
                     ],
                     "executable": false
                 }
             },
-            "ref": "447df166c9f044907b91f20ea40425bedbc62fe9"
+            "ref": "46dc285af137cf2b520ee9da3bcadc6d289ac64b"
         }
     }
 }
