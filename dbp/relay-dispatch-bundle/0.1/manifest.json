@@ -10,9 +10,9 @@
         "DISPATCH_SENDER_PROFILE": "enter-sender-profile-here",
         "DISPATCH_CERT_PASSWORD": "enter-password-here",
         "DISPATCH_CERT_P12": "base64-cert-here",
-        "DISPATCH_BASE_URL": "https://dualtest.vendo.at/mprs-core/services10",
-        "DISPATCH_DELIVERY_REQUEST_URL_PART": "/DDWebServiceProcessor",
-        "DISPATCH_PRE_ADDRESSING_REQUEST_URL_PART": "/DDAddressingProcessor",
-        "DISPATCH_STATUS_REQUEST_URL_PART": "/DDPollingServiceProcessor"
+        "DISPATCH_BASE_URL": "https://dualtest.vendo.at",
+        "DISPATCH_DELIVERY_REQUEST_URL_PART": "/mprs-core/services10/DDWebServiceProcessor",
+        "DISPATCH_PRE_ADDRESSING_REQUEST_URL_PART": "/mprs-core/services10/DDAddressingProcessor",
+        "DISPATCH_STATUS_REQUEST_URL_PART": "/mprs-polling/services10/DDPollingServiceProcessor"
     }
 }
