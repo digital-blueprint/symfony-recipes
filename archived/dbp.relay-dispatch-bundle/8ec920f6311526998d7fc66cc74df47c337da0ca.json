@@ -1,0 +1,44 @@
+{
+    "manifests": {
+        "dbp/relay-dispatch-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Dbp\\Relay\\DispatchBundle\\DbpRelayDispatchBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "DISPATCH_DATABASE_URL": "mysql://user:secret@mariadb:3306/db",
+                    "DISPATCH_SENDER_PROFILE": "enter-sender-profile-here",
+                    "DISPATCH_CERT_PASSWORD": "enter-password-here",
+                    "DISPATCH_CERT_P12": "base64-cert-here",
+                    "DISPATCH_BASE_URL": "https://dualtest.vendo.at",
+                    "DISPATCH_DELIVERY_REQUEST_URL_PART": "/mprs-core/services10/DDWebServiceProcessor",
+                    "DISPATCH_PRE_ADDRESSING_REQUEST_URL_PART": "/mprs-core/services10/DDAddressingProcessor",
+                    "DISPATCH_STATUS_REQUEST_URL_PART": "/mprs-polling/services10/DDPollingServiceProcessor"
+                }
+            },
+            "files": {
+                "config/packages/dbp_relay_dispatch.yaml": {
+                    "contents": [
+                        "dbp_relay_dispatch:",
+                        "  database_url: '%env(DISPATCH_DATABASE_URL)%'",
+                        "  sender_profile: '%env(DISPATCH_SENDER_PROFILE)%'",
+                        "  cert_password: '%env(DISPATCH_CERT_PASSWORD)%'",
+                        "  cert_p12: '%env(DISPATCH_CERT_P12)%'",
+                        "  base_url: '%env(DISPATCH_BASE_URL)%'",
+                        "  delivery_request_url_part: '%env(DISPATCH_DELIVERY_REQUEST_URL_PART)%'",
+                        "  pre_addressing_request_url_part: '%env(DISPATCH_PRE_ADDRESSING_REQUEST_URL_PART)%'",
+                        "  status_request_url_part: '%env(DISPATCH_STATUS_REQUEST_URL_PART)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "8ec920f6311526998d7fc66cc74df47c337da0ca"
+        }
+    }
+}
