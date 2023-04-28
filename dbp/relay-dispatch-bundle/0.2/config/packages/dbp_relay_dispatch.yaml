@@ -1,0 +1,16 @@
+dbp_relay_dispatch:
+  database_url: '%env(DISPATCH_DATABASE_URL)%'
+  service_url: '%env(DISPATCH_SERVICE_URL)%'
+  sender_profile: '%env(DISPATCH_SENDER_PROFILE)%'
+  sender_profile_version: '%env(DISPATCH_SENDER_PROFILE_VERSION)%'
+  cert: '%env(base64:DISPATCH_CERT)%'
+  cert_password: '%env(DISPATCH_CERT_PASSWORD)%'
+  authorization:
+      roles:
+          ROLE_GROUP_READER_METADATA: 'currentGroup.getIdentifier() in user.get("DISPATCH_READ_METADATA_GROUPS", [])'
+          ROLE_GROUP_READER_CONTENT: 'currentGroup.getIdentifier() in user.get("DISPATCH_READ_CONTENT_GROUPS", [])'
+          ROLE_GROUP_WRITER: 'currentGroup.getIdentifier() in user.get("DISPATCH_WRITE_GROUPS", [])'
+          ROLE_GROUP_WRITER_READ_ADDRESS: 'currentGroup.getIdentifier() in user.get("DISPATCH_WRITE_READ_ADDRESS_GROUPS", [])'
+          ROLE_USER: '(user.get("DISPATCH_WRITE_GROUPS", []) !== []) || (user.get("DISPATCH_READ_CONTENT_GROUPS", []) !== []) || (user.get("DISPATCH_READ_METADATA_GROUPS", []) !== [])'
+      attributes:
+          GROUPS: 'user.get("DISPATCH_ALL_GROUPS", [])'
