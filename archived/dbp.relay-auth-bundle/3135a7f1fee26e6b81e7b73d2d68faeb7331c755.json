@@ -1,0 +1,32 @@
+{
+    "manifests": {
+        "dbp/relay-auth-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Dbp\\Relay\\AuthBundle\\DbpRelayAuthBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "AUTH_SERVER_URL": "https://auth.your-server/auth/realms/your-realm",
+                    "AUTH_FRONTEND_CLIENT_ID": "api-docs-client-id"
+                }
+            },
+            "files": {
+                "config/packages/dbp_relay_auth.yaml": {
+                    "contents": [
+                        "dbp_relay_auth:",
+                        "  server_url: '%env(AUTH_SERVER_URL)%'",
+                        "  frontend_client_id: '%env(AUTH_FRONTEND_CLIENT_ID)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "3135a7f1fee26e6b81e7b73d2d68faeb7331c755"
+        }
+    }
+}
