@@ -12,9 +12,7 @@
                 },
                 "env": {
                     "AUTH_SERVER_URL": "https://auth.your-server/auth/realms/your-realm",
-                    "AUTH_APIDOCS_KEYCLOAK_SERVER": "https://auth.your-server/auth",
-                    "AUTH_APIDOCS_KEYCLOAK_REALM": "your-realm",
-                    "AUTH_APIDOCS_KEYCLOAK_CLIENT_ID": "api-docs-client-id"
+                    "AUTH_FRONTEND_CLIENT_ID": "api-docs-client-id"
                 }
             },
             "files": {
@@ -22,16 +20,13 @@
                     "contents": [
                         "dbp_relay_auth:",
                         "  server_url: '%env(AUTH_SERVER_URL)%'",
-                        "  # (optional) This allows you to log into the auto generated OpenAPI documentation page",
-                        "  # which you can see when visiting the server with a browser. Remove to disable.",
-                        "  frontend_keycloak_server: '%env(AUTH_APIDOCS_KEYCLOAK_SERVER)%'",
-                        "  frontend_keycloak_realm: '%env(AUTH_APIDOCS_KEYCLOAK_REALM)%'",
-                        "  frontend_keycloak_client_id: '%env(AUTH_APIDOCS_KEYCLOAK_CLIENT_ID)%'"
+                        "  frontend_client_id: '%env(AUTH_FRONTEND_CLIENT_ID)%'",
+                        ""
                     ],
                     "executable": false
                 }
             },
-            "ref": "1195a75c2c8826343f3cc936a06a883f986a56ae"
+            "ref": "3135a7f1fee26e6b81e7b73d2d68faeb7331c755"
         }
     }
 }
