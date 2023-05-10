@@ -1,0 +1,16 @@
+{
+    "bundles": {
+        "Dbp\\Relay\\DispatchBundle\\DbpRelayDispatchBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "DISPATCH_DATABASE_URL": "mysql://user:secret@mariadb:3306/db",
+        "DISPATCH_SERVICE_URL": "https://dualtest.vendo.at",
+        "DISPATCH_SENDER_PROFILE": "enter-sender-profile-here",
+        "DISPATCH_SENDER_PROFILE_VERSION": "1.0",
+        "DISPATCH_CERT": "base64-cert-here",
+        "DISPATCH_CERT_PASSWORD": "enter-password-here"
+    }
+}
