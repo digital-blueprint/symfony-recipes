@@ -21,7 +21,8 @@
         "dbp/relay-dispatch-bundle": [
             "0.1",
             "0.2",
-            "0.3"
+            "0.3",
+            "0.4"
         ],
         "dbp/relay-esign-bundle": [
             "0.2"
