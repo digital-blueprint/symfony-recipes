@@ -9,6 +9,9 @@
             "0.2",
             "0.4"
         ],
+        "dbp/relay-blob-bundle": [
+            "0.1"
+        ],
         "dbp/relay-campusonline-bundle": [
             "0.1"
         ],
