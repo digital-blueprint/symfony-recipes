@@ -1,0 +1,34 @@
+{
+    "manifests": {
+        "dbp/relay-blob-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Dbp\\Relay\\BlobBundle\\DbpRelayBlobBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "BLOB_DATABASE_URL": "mysql://user:secret@mariadb:3306/db",
+                    "BLOB_LINK_URL": "http://127.0.0.1:8000/",
+                    "BLOB_REPORTING_INTERVAL": "0 11 * * MON"
+                }
+            },
+            "files": {
+                "config/packages/dbp_relay_blob.yaml": {
+                    "contents": [
+                        "dbp_relay_blob:",
+                        "  database_url: '%env(BLOB_DATABASE_URL)%'",
+                        "  link_url: '%env(BLOB_LINK_URL)%'",
+                        "  reporting_interval: '%env(BLOB_REPORTING_INTERVAL)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "4b571b955ba7659aae6baf9fc2bc06f7255cb461"
+        }
+    }
+}
