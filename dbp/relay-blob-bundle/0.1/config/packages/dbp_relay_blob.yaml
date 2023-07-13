@@ -3,3 +3,34 @@ dbp_relay_blob:
   link_url: '%env(BLOB_LINK_URL)%'
   reporting_interval: '%env(BLOB_REPORTING_INTERVAL)%'
   buckets:
+      test_bucket:
+          service: 'Dbp\Relay\BlobConnectorFilesystemBundle\Service\FilesystemService'
+          bucket_id: '1234'
+          bucket_name: 'Test bucket'
+          public_key: 'oaYdaVWxSF8qSk73ewCMQktKhvriYSxvPBudrUQ5qSmFt334FfebTfmQZmFLaruB'
+          path: 'testpath'
+          quota: 500 # in MB
+          notify_when_quota_over: 70 # in percent of the quota
+          report_when_expiry_in: 'P62D' # in Days, 62 = two 31 day months
+          bucket_owner: 'email@some-mail-server.com'
+          max_retention_duration: 'P60D'
+          link_expire_time: 'PT1M'
+          policies:
+              create: true
+              delete: true
+              open: true
+              download: true
+              rename: true
+              work: true
+          notify_quota:
+              dsn: '%env(BLOB_MAILER_TRANSPORT_DSN)%'
+              from: 'email@some-mail-server.com'
+              to: 'email@some-mail-server.com'
+              subject: 'Blob notify quota'
+              html_template: 'emails/notify-quota.html.twig'
+          reporting:
+              dsn: '%env(BLOB_MAILER_TRANSPORT_DSN)%'
+              from: 'email@some-mail-server.com'
+              to: 'email@some-mail-server.com'
+              subject: 'Blob file deletion reporting'
+              html_template: 'emails/reporting.html.twig'
