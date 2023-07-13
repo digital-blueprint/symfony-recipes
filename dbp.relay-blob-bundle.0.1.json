@@ -23,12 +23,13 @@
                         "  database_url: '%env(BLOB_DATABASE_URL)%'",
                         "  link_url: '%env(BLOB_LINK_URL)%'",
                         "  reporting_interval: '%env(BLOB_REPORTING_INTERVAL)%'",
+                        "  buckets:",
                         ""
                     ],
                     "executable": false
                 }
             },
-            "ref": "4b571b955ba7659aae6baf9fc2bc06f7255cb461"
+            "ref": "0735eeaf50689b00c0fe7c8a3926995cfdb99b38"
         }
     }
 }
