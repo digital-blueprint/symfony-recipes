@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Dbp\\Relay\\BlobConnectorFilesystemBundle\\DbpRelayBlobConnectorFilesystemBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "BLOB_CONNECTOR_FILESYSTEM_PATH": "%kernel.project_dir%/var/blobFiles",
+        "BLOB_CONNECTOR_FILESYSTEM_LINK_URL": "http://127.0.0.1:8000/"
+    }
+}
