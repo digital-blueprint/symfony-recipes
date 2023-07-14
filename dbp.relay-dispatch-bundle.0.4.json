@@ -18,6 +18,7 @@
                     "DISPATCH_CERT": "base64-cert-here",
                     "DISPATCH_CERT_PASSWORD": "enter-password-here",
                     "DISPATCH_FILE_STORAGE": "database",
+                    "DISPATCH_BLOB_BASE_URL": "",
                     "DISPATCH_BLOB_BUCKET_ID": "",
                     "DISPATCH_BLOB_KEY": ""
                 }
@@ -33,6 +34,7 @@
                         "  cert: '%env(base64:DISPATCH_CERT)%'",
                         "  cert_password: '%env(DISPATCH_CERT_PASSWORD)%'",
                         "  file_storage: '%env(DISPATCH_FILE_STORAGE)%'",
+                        "  blob_base_url: '%env(DISPATCH_BLOB_BASE_URL)%'",
                         "  blob_bucket_id: '%env(DISPATCH_BLOB_BUCKET_ID)%'",
                         "  blob_key: '%env(DISPATCH_BLOB_KEY)%'",
                         "  authorization:",
@@ -49,7 +51,7 @@
                     "executable": false
                 }
             },
-            "ref": "acadca05e5f22d2c213960cc386d14c802865f41"
+            "ref": "b3a8329902c0fd10d73518d7742e13f37ebcf6cf"
         }
     }
 }
