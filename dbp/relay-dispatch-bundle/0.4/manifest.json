@@ -13,6 +13,7 @@
         "DISPATCH_CERT": "base64-cert-here",
         "DISPATCH_CERT_PASSWORD": "enter-password-here",
         "DISPATCH_FILE_STORAGE": "database",
+        "DISPATCH_BLOB_BASE_URL": "",
         "DISPATCH_BLOB_BUCKET_ID": "",
         "DISPATCH_BLOB_KEY": ""
     }

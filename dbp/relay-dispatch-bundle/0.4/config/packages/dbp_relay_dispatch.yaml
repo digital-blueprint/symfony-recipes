@@ -6,6 +6,7 @@ dbp_relay_dispatch:
   cert: '%env(base64:DISPATCH_CERT)%'
   cert_password: '%env(DISPATCH_CERT_PASSWORD)%'
   file_storage: '%env(DISPATCH_FILE_STORAGE)%'
+  blob_base_url: '%env(DISPATCH_BLOB_BASE_URL)%'
   blob_bucket_id: '%env(DISPATCH_BLOB_BUCKET_ID)%'
   blob_key: '%env(DISPATCH_BLOB_KEY)%'
   authorization:
