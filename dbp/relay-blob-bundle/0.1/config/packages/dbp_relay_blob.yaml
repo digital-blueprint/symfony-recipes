@@ -7,8 +7,7 @@ dbp_relay_blob:
           service: 'Dbp\Relay\BlobConnectorFilesystemBundle\Service\FilesystemService'
           bucket_id: '1234'
           bucket_name: 'Test bucket'
-          public_key: 'oaYdaVWxSF8qSk73ewCMQktKhvriYSxvPBudrUQ5qSmFt334FfebTfmQZmFLaruB'
-          path: 'testpath'
+          key: 'oaYdaVWxSF8qSk73ewCMQktKhvriYSxvPBudrUQ5qSmFt334FfebTfmQZmFLaruB'
           quota: 500 # in MB
           notify_when_quota_over: 70 # in percent of the quota
           report_when_expiry_in: 'P62D' # in Days, 62 = two 31 day months
