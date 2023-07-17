@@ -29,8 +29,7 @@
                         "          service: 'Dbp\\Relay\\BlobConnectorFilesystemBundle\\Service\\FilesystemService'",
                         "          bucket_id: '1234'",
                         "          bucket_name: 'Test bucket'",
-                        "          public_key: 'oaYdaVWxSF8qSk73ewCMQktKhvriYSxvPBudrUQ5qSmFt334FfebTfmQZmFLaruB'",
-                        "          path: 'testpath'",
+                        "          key: 'oaYdaVWxSF8qSk73ewCMQktKhvriYSxvPBudrUQ5qSmFt334FfebTfmQZmFLaruB'",
                         "          quota: 500 # in MB",
                         "          notify_when_quota_over: 70 # in percent of the quota",
                         "          report_when_expiry_in: 'P62D' # in Days, 62 = two 31 day months",
@@ -61,7 +60,7 @@
                     "executable": false
                 }
             },
-            "ref": "77ed22d7799b9753b1fc36f2eea67b07298ce608"
+            "ref": "2f8dfb2ae6f027b4728f1c6670cf08f47647ea96"
         }
     }
 }
