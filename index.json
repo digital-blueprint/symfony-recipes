@@ -45,6 +45,9 @@
         "dbp/relay-maker-bundle": [
             "0.1"
         ],
+        "dbp/relay-mono-bundle": [
+            "0.3"
+        ],
         "dbp/relay-sublibrary-bundle": [
             "0.1"
         ]
