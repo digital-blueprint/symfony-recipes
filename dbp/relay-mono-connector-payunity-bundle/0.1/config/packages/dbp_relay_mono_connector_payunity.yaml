@@ -1,0 +1,13 @@
+dbp_relay_mono_connector_payunity:
+  database_url: '%env(MONO_CONNECTOR_PAYUNITY_DATABASE_URL)'
+  payment_contracts:
+    payunity_flex:
+      api_url: '%env(MONO_CONNECTOR_PAYUNITY_API_URL)%'
+      entity_id: '%env(MONO_CONNECTOR_PAYUNITY_ENTITY_ID)%'
+      access_token: '%env(MONO_CONNECTOR_PAYUNITY_ACCESS_TOKEN)%'
+      webhook_secret: '%env(MONO_CONNECTOR_PAYUNITY_WEBHOOK_SECRET)%'
+      payment_methods_to_widgets:
+        payunity_creditcard:
+          widget_url: '/mono-connector-payunity/widget?identifier={identifier}&lang={lang}'
+          brands: 'MASTER VISA'
+          template: 'index.html.twig'
