@@ -1,0 +1,48 @@
+{
+    "manifests": {
+        "dbp/relay-mono-connector-campusonline-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Dbp\\Relay\\MonoConnectorCampusonlineBundle\\DbpRelayMonoConnectorCampusonlineBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "MONO_CONNECTOR_CAMPUSONLINE_API_URL": "",
+                    "MONO_CONNECTOR_CAMPUSONLINE_CLIENT_ID": "",
+                    "MONO_CONNECTOR_CAMPUSONLINE_CLIENT_SECRET": "",
+                    "MONO_CONNECTOR_CAMPUSONLINE_LDAP_HOST": "",
+                    "MONO_CONNECTOR_CAMPUSONLINE_LDAP_BASE_DN": "",
+                    "MONO_CONNECTOR_CAMPUSONLINE_LDAP_USERNAME": "",
+                    "MONO_CONNECTOR_CAMPUSONLINE_LDAP_PASSWORD": ""
+                }
+            },
+            "files": {
+                "config/packages/dbp_relay_mono_connector_campusonline.yaml": {
+                    "contents": [
+                        "dbp_relay_mono_connector_campusonline:",
+                        "  payment_types:",
+                        "    tuition_fee:",
+                        "      api_url: '%env(resolve:MONO_CONNECTOR_CAMPUSONLINE_API_URL)%'",
+                        "      client_id: '%env(MONO_CONNECTOR_CAMPUSONLINE_CLIENT_ID)%'",
+                        "      client_secret: '%env(MONO_CONNECTOR_CAMPUSONLINE_CLIENT_SECRET)%'",
+                        "      ldap_host: '%env(MONO_CONNECTOR_CAMPUSONLINE_LDAP_HOST)%'",
+                        "      ldap_base_dn: '%env(MONO_CONNECTOR_CAMPUSONLINE_LDAP_BASE_DN)%'",
+                        "      ldap_username: '%env(MONO_CONNECTOR_CAMPUSONLINE_LDAP_USERNAME)%'",
+                        "      ldap_password: '%env(MONO_CONNECTOR_CAMPUSONLINE_LDAP_PASSWORD)%'",
+                        "      ldap_identifier_attribute: 'cn'",
+                        "      ldap_obfuscated_id_attribute: 'CO-OBFUSCATED-C-IDENT'",
+                        "      ldap_given_name_attribute: 'givenName'",
+                        "      ldap_family_name_attribute: 'sn'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "111a4f167efd1bf9fe2dd736afa64b09113f12a5"
+        }
+    }
+}
