@@ -1,0 +1,20 @@
+{
+    "bundles": {
+        "Dbp\\Relay\\SublibraryBundle\\DbpRelaySublibraryBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "ALMA_API_URL": "https://api-eu.hosted.exlibrisgroup.com/almaws/v1",
+        "ALMA_API_KEY": "",
+        "ALMA_ANALYTICS_API_KEY": "",
+        "ALMA_READONLY": "",
+        "LDAP_HOST": "directory.yourdomain.at",
+        "LDAP_BASE_DN": "o=dbp",
+        "LDAP_USER": "user",
+        "LDAP_PASS": "pass",
+        "LDAP_ATTRIBUTE_IDENTIFIER": "cn",
+        "LDAP_ATTRIBUTE_ALMA_USER_ID": "CO-ALMA-PATRON-ID"
+    }
+}

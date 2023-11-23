@@ -1,0 +1,20 @@
+dbp_relay_sublibrary:
+    api_url: '%env(ALMA_API_URL)%'
+    api_key: '%env(ALMA_API_KEY)%'
+    analytics_api_key: '%env(ALMA_ANALYTICS_API_KEY)%'
+    readonly: '%env(bool:ALMA_READONLY)%'
+    ldap:
+        host: '%env(LDAP_HOST)%'
+        base_dn: '%env(LDAP_BASE_DN)%'
+        username: '%env(LDAP_USER)%'
+        password: '%env(LDAP_PASS)%'
+        encryption: 'simple_tls'
+        attributes:
+            identifier: '%env(LDAP_ATTRIBUTE_IDENTIFIER)%'
+            alma_user_id: '%env(LDAP_ATTRIBUTE_ALMA_USER_ID)%'
+    authorization:
+        policies:
+            ROLE_LIBRARY_MANAGER: 'false'
+        attributes:
+            SUBLIBRARY_IDS: '[]'
+            ALMA_LIBRARY_IDS: '[]'
