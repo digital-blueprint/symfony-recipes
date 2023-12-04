@@ -2,6 +2,7 @@ dbp_relay_blob:
   database_url: '%env(BLOB_DATABASE_URL)%'
   link_url: '%env(BLOB_LINK_URL)%'
   reporting_interval: '%env(BLOB_REPORTING_INTERVAL)%'
+  cleanup_interval: '*/5 * * * *'
   buckets:
       test_bucket:
           service: 'Dbp\Relay\BlobConnectorFilesystemBundle\Service\FilesystemService'
