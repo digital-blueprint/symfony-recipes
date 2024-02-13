@@ -3,6 +3,8 @@ dbp_relay_blob:
   link_url: '%env(BLOB_LINK_URL)%'
   reporting_interval: '%env(BLOB_REPORTING_INTERVAL)%'
   cleanup_interval: '*/5 * * * *'
+  file_integrity_checks: false # if file integrity checks should be performed periodically
+  integrity_check_interval: "0 0 1 * *" # when integrity check cronjob should run
   buckets:
       test_bucket:
           service: 'Dbp\Relay\BlobConnectorFilesystemBundle\Service\FilesystemService'
