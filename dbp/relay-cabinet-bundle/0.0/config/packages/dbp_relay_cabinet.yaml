@@ -1,0 +1,14 @@
+dbp_relay_cabinet:
+  database_url: '%env(CABINET_DATABASE_URL)%'
+  blob_base_url: '%env(CABINET_BLOB_BASE_URL)%'
+  blob_bucket_id: '%env(CABINET_BLOB_BUCKET_ID)%'
+  blob_key: '%env(CABINET_BLOB_KEY)%'
+  authorization:
+      policies:
+          ROLE_GROUP_READER_METADATA: 'currentGroup.getIdentifier() in user.get("CABINET_READ_METADATA_GROUPS", [])'
+          ROLE_GROUP_READER_CONTENT: 'currentGroup.getIdentifier() in user.get("CABINET_READ_CONTENT_GROUPS", [])'
+          ROLE_GROUP_WRITER: 'currentGroup.getIdentifier() in user.get("CABINET_WRITE_GROUPS", [])'
+          ROLE_GROUP_WRITER_READ_ADDRESS: 'currentGroup.getIdentifier() in user.get("CABINET_WRITE_READ_ADDRESS_GROUPS", [])'
+          ROLE_USER: '(user.get("CABINET_WRITE_GROUPS", []) !== []) || (user.get("CABINET_READ_CONTENT_GROUPS", []) !== []) || (user.get("CABINET_READ_METADATA_GROUPS", []) !== [])'
+      attributes:
+          GROUPS: 'user.get("CABINET_ALL_GROUPS", [])'
