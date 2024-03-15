@@ -15,6 +15,9 @@
         "dbp/relay-blob-connector-filesystem-bundle": [
             "0.1"
         ],
+        "dbp/relay-cabinet-bundle": [
+            "0.0"
+        ],
         "dbp/relay-campusonline-bundle": [
             "0.1"
         ],
