@@ -14,7 +14,9 @@
                     "CABINET_DATABASE_URL": "mysql://user:secret@mariadb:3306/db",
                     "CABINET_BLOB_BASE_URL": "",
                     "CABINET_BLOB_BUCKET_ID": "",
-                    "CABINET_BLOB_KEY": ""
+                    "CABINET_BLOB_KEY": "",
+                    "CABINET_TYPESENSE_BASE_URL": "",
+                    "CABINET_TYPESENSE_API_KEY": ""
                 }
             },
             "files": {
@@ -25,6 +27,8 @@
                         "  blob_base_url: '%env(CABINET_BLOB_BASE_URL)%'",
                         "  blob_bucket_id: '%env(CABINET_BLOB_BUCKET_ID)%'",
                         "  blob_key: '%env(CABINET_BLOB_KEY)%'",
+                        "  typesense_base_url: '%env(CABINET_TYPESENSE_BASE_URL)%'",
+                        "  typesense_api_key: '%env(CABINET_TYPESENSE_API_KEY)%'",
                         "  authorization:",
                         "      policies:",
                         "          ROLE_GROUP_READER_METADATA: 'currentGroup.getIdentifier() in user.get(\"CABINET_READ_METADATA_GROUPS\", [])'",
@@ -39,7 +43,7 @@
                     "executable": false
                 }
             },
-            "ref": "27b18acade4041ef26e0c61e26e4eb5c362aec6f"
+            "ref": "0e9cedd42dbe5be50da8be3245a93447029a6ee0"
         }
     }
 }
