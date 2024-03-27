@@ -18,13 +18,6 @@ dbp_relay_blob:
           bucket_owner: 'email@some-mail-server.com'
           max_retention_duration: 'P60D'
           link_expire_time: 'PT1M'
-          policies:
-              create: true
-              delete: true
-              open: true
-              download: true
-              rename: true
-              work: true
           notify_quota:
               dsn: '%env(BLOB_MAILER_TRANSPORT_DSN)%'
               from: 'email@some-mail-server.com'
