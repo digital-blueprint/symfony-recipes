@@ -40,13 +40,6 @@
                         "          bucket_owner: 'email@some-mail-server.com'",
                         "          max_retention_duration: 'P60D'",
                         "          link_expire_time: 'PT1M'",
-                        "          policies:",
-                        "              create: true",
-                        "              delete: true",
-                        "              open: true",
-                        "              download: true",
-                        "              rename: true",
-                        "              work: true",
                         "          notify_quota:",
                         "              dsn: '%env(BLOB_MAILER_TRANSPORT_DSN)%'",
                         "              from: 'email@some-mail-server.com'",
@@ -64,7 +57,7 @@
                     "executable": false
                 }
             },
-            "ref": "926cf11b5f91c5fc913a77b681da581921436c24"
+            "ref": "afce8cbb271c1c8238c49a94414ea0be6ab7a349"
         }
     }
 }
