@@ -27,6 +27,9 @@
         "dbp/relay-core-bundle": [
             "0.1"
         ],
+        "dbp/relay-core-connector-ldap-bundle": [
+            "0.2"
+        ],
         "dbp/relay-dispatch-bundle": [
             "0.1",
             "0.2",
