@@ -59,7 +59,8 @@
         ],
         "dbp/relay-sublibrary-bundle": [
             "0.1",
-            "2.0"
+            "0.2",
+            "0.4"
         ]
     },
     "recipe-conflicts": [],
