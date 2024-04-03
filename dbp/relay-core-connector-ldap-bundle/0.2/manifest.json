@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "Dbp\\Relay\\CoreConnectorLdapBundle\\DbpRelayCoreConnectorLdapBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "LDAP_HOST": "directory.yourdomain.at",
+        "LDAP_BASE_DN": "o=dbp",
+        "LDAP_USER": "user",
+        "LDAP_PASS": "pass"    }
+}
