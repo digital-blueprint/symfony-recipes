@@ -1,0 +1,37 @@
+{
+    "manifests": {
+        "dbp/relay-base-person-connector-ldap-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Dbp\\Relay\\BasePersonConnectorLdapBundle\\DbpRelayBasePersonConnectorLdapBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "LDAP_PERSON_PROVIDER_LDAP_ATTRIBUTE_IDENTIFIER": "cn",
+                    "LDAP_PERSON_PROVIDER_LDAP_ATTRIBUTE_GIVEN_NAME": "givenName",
+                    "LDAP_PERSON_PROVIDER_LDAP_ATTRIBUTE_FAMILY_NAME": "sn"
+                }
+            },
+            "files": {
+                "config/packages/dbp_relay_base_person_connector_ldap.yaml": {
+                    "contents": [
+                        "dbp_relay_base_person_connector_ldap:",
+                        "  ldap:",
+                        "    connection: DEFAULT",
+                        "    attributes:",
+                        "      identifier: '%env(LDAP_PERSON_PROVIDER_LDAP_ATTRIBUTE_IDENTIFIER)%'",
+                        "      given_name: '%env(LDAP_PERSON_PROVIDER_LDAP_ATTRIBUTE_GIVEN_NAME)%'",
+                        "      family_name: '%env(LDAP_PERSON_PROVIDER_LDAP_ATTRIBUTE_FAMILY_NAME)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "9ee3e38e30418de002eb2cad2b6ef552a4e3fae8"
+        }
+    }
+}
