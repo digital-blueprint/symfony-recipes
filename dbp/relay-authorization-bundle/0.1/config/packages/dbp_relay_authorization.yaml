@@ -1,0 +1,2 @@
+dbp_relay_authorization:
+    database_url: '%env(AUTHORIZATION_DATABASE_URL)%'
