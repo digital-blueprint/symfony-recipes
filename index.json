@@ -4,6 +4,9 @@
         "dbp/relay-auth-bundle": [
             "0.1"
         ],
+        "dbp/relay-authorization-bundle": [
+            "0.1"
+        ],
         "dbp/relay-base-person-connector-ldap-bundle": [
             "0.1",
             "0.2",

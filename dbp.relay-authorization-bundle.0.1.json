@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "dbp/relay-authorization-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Dbp\\Relay\\AuthorizationBundle\\DbpRelayAuthorizationBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "AUTHORIZATION_DATABASE_URL": "mysql://user:secret@mariadb:3306/db"
+                }
+            },
+            "files": {
+                "config/packages/dbp_relay_authorization.yaml": {
+                    "contents": [
+                        "dbp_relay_authorization:",
+                        "    database_url: '%env(AUTHORIZATION_DATABASE_URL)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "03c4eb9a730267f1370ea77e2cd3ebf276f32ae0"
+        }
+    }
+}
