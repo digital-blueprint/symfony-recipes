@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "Dbp\\Relay\\MonoConnectorCampusonlineBundle\\DbpRelayMonoConnectorCampusonlineBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "MONO_CONNECTOR_CAMPUSONLINE_API_URL": "",
+        "MONO_CONNECTOR_CAMPUSONLINE_CLIENT_ID": "",
+        "MONO_CONNECTOR_CAMPUSONLINE_CLIENT_SECRET": ""
+    }
+}
