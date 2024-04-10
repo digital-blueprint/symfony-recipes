@@ -11,7 +11,7 @@
                     "config/": "%CONFIG_DIR%/"
                 },
                 "env": {
-                    "MONO_CONNECTOR_PAYUNITY_DATABASE_URL": "mysql://user:secret@mariadb:3306/db",
+                    "MONO_CONNECTOR_PAYUNITY_DATABASE_URL": "mysql://user:secret@mariadb:3306/db?serverVersion=mariadb-10.3.30",
                     "MONO_CONNECTOR_PAYUNITY_ENTITY_ID": "",
                     "MONO_CONNECTOR_PAYUNITY_ACCESS_TOKEN": "",
                     "MONO_CONNECTOR_PAYUNITY_WEBHOOK_SECRET": ""
@@ -21,7 +21,7 @@
                 "config/packages/dbp_relay_mono_connector_payunity.yaml": {
                     "contents": [
                         "dbp_relay_mono_connector_payunity:",
-                        "  database_url: '%env(MONO_CONNECTOR_PAYUNITY_DATABASE_URL)'",
+                        "  database_url: '%env(MONO_CONNECTOR_PAYUNITY_DATABASE_URL)%'",
                         "  payment_contracts:",
                         "    payunity_flex:",
                         "      api_url: '%env(MONO_CONNECTOR_PAYUNITY_API_URL)%'",
@@ -38,7 +38,7 @@
                     "executable": false
                 }
             },
-            "ref": "7a28fe0c0d562a4017874c05c26f06cbebbad055"
+            "ref": "61063612198459194cb55cd6cfb7ea115beee19b"
         }
     }
 }
