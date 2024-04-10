@@ -1,0 +1,44 @@
+{
+    "manifests": {
+        "dbp/relay-mono-connector-payunity-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Dbp\\Relay\\MonoConnectorPayunityBundle\\DbpRelayMonoConnectorPayunityBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "MONO_CONNECTOR_PAYUNITY_DATABASE_URL": "mysql://user:secret@mariadb:3306/db",
+                    "MONO_CONNECTOR_PAYUNITY_ENTITY_ID": "",
+                    "MONO_CONNECTOR_PAYUNITY_ACCESS_TOKEN": "",
+                    "MONO_CONNECTOR_PAYUNITY_WEBHOOK_SECRET": ""
+                }
+            },
+            "files": {
+                "config/packages/dbp_relay_mono_connector_payunity.yaml": {
+                    "contents": [
+                        "dbp_relay_mono_connector_payunity:",
+                        "  database_url: '%env(MONO_CONNECTOR_PAYUNITY_DATABASE_URL)%'",
+                        "  payment_contracts:",
+                        "    payunity_flex:",
+                        "      api_url: '%env(MONO_CONNECTOR_PAYUNITY_API_URL)%'",
+                        "      entity_id: '%env(MONO_CONNECTOR_PAYUNITY_ENTITY_ID)%'",
+                        "      access_token: '%env(MONO_CONNECTOR_PAYUNITY_ACCESS_TOKEN)%'",
+                        "      webhook_secret: '%env(MONO_CONNECTOR_PAYUNITY_WEBHOOK_SECRET)%'",
+                        "      payment_methods_to_widgets:",
+                        "        payunity_creditcard:",
+                        "          widget_url: '/mono-connector-payunity/widget?identifier={identifier}&lang={lang}'",
+                        "          brands: 'MASTER VISA'",
+                        "          template: 'index.html.twig'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "84d34307efe0c39291e736a966da3bb60e0aef7f"
+        }
+    }
+}
