@@ -7,7 +7,6 @@
     },
     "env": {
         "BLOB_DATABASE_URL": "mysql://user:secret@mariadb:3306/db",
-        "BLOB_LINK_URL": "http://127.0.0.1:8000/",
         "BLOB_REPORTING_INTERVAL": "0 11 * * MON",
         "BLOB_MAILER_TRANSPORT_DSN": "sendmail://default"
     }

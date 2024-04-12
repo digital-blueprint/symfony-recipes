@@ -1,6 +1,5 @@
 dbp_relay_blob:
   database_url: '%env(BLOB_DATABASE_URL)%'
-  link_url: '%env(BLOB_LINK_URL)%'
   reporting_interval: '%env(BLOB_REPORTING_INTERVAL)%'
   cleanup_interval: '*/5 * * * *'
   additional_auth: false # no credential flow or other additional auth check required
