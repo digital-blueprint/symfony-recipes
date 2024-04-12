@@ -26,6 +26,7 @@
                         "  additional_auth: false # no credential flow or other additional auth check required",
                         "  file_integrity_checks: false # if file integrity checks should be performed periodically",
                         "  integrity_check_interval: \"0 0 1 * *\" # when integrity check cronjob should run",
+                        "  bucket_size_check_interval: \"0 2 * * 1\" # when bucket size check cronjob should run",
                         "  buckets:",
                         "      test_bucket:",
                         "          service: 'Dbp\\Relay\\BlobConnectorFilesystemBundle\\Service\\FilesystemService'",
@@ -55,7 +56,7 @@
                     "executable": false
                 }
             },
-            "ref": "a1c39e1f5d4665e1587234be3bdbbbbda04ea01c"
+            "ref": "28f70b95080f2d809a239af4f93ae8cb5d145ec2"
         }
     }
 }
