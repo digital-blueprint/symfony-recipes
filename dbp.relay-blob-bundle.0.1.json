@@ -12,7 +12,6 @@
                 },
                 "env": {
                     "BLOB_DATABASE_URL": "mysql://user:secret@mariadb:3306/db",
-                    "BLOB_LINK_URL": "http://127.0.0.1:8000/",
                     "BLOB_REPORTING_INTERVAL": "0 11 * * MON",
                     "BLOB_MAILER_TRANSPORT_DSN": "sendmail://default"
                 }
@@ -22,7 +21,6 @@
                     "contents": [
                         "dbp_relay_blob:",
                         "  database_url: '%env(BLOB_DATABASE_URL)%'",
-                        "  link_url: '%env(BLOB_LINK_URL)%'",
                         "  reporting_interval: '%env(BLOB_REPORTING_INTERVAL)%'",
                         "  cleanup_interval: '*/5 * * * *'",
                         "  additional_auth: false # no credential flow or other additional auth check required",
@@ -57,7 +55,7 @@
                     "executable": false
                 }
             },
-            "ref": "afce8cbb271c1c8238c49a94414ea0be6ab7a349"
+            "ref": "a1c39e1f5d4665e1587234be3bdbbbbda04ea01c"
         }
     }
 }
