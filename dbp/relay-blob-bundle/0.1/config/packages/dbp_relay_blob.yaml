@@ -5,6 +5,7 @@ dbp_relay_blob:
   additional_auth: false # no credential flow or other additional auth check required
   file_integrity_checks: false # if file integrity checks should be performed periodically
   integrity_check_interval: "0 0 1 * *" # when integrity check cronjob should run
+  bucket_size_check_interval: "0 2 * * 1" # when bucket size check cronjob should run
   buckets:
       test_bucket:
           service: 'Dbp\Relay\BlobConnectorFilesystemBundle\Service\FilesystemService'
