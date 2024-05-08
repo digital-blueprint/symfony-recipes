@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "Dbp\\Relay\\CabinetConnectorCampusonlineBundle\\DbpRelayCabinetConnectorCampusonlineBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "CABINET_CONNECTOR_CAMPUSONLINE_API_URL": "",
+        "CABINET_CONNECTOR_CAMPUSONLINE_CLIENT_ID": "",
+        "CABINET_CONNECTOR_CAMPUSONLINE_CLIENT_SECRET": ""
+    }
+}
