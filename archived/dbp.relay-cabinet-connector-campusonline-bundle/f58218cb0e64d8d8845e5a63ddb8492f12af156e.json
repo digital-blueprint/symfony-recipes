@@ -1,0 +1,36 @@
+{
+    "manifests": {
+        "dbp/relay-cabinet-connector-campusonline-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Dbp\\Relay\\CabinetConnectorCampusonlineBundle\\DbpRelayCabinetConnectorCampusonlineBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "CABINET_CONNECTOR_CAMPUSONLINE_API_URL": "",
+                    "CABINET_CONNECTOR_CAMPUSONLINE_CLIENT_ID": "",
+                    "CABINET_CONNECTOR_CAMPUSONLINE_CLIENT_SECRET": ""
+                }
+            },
+            "files": {
+                "config/packages/dbp_relay_cabinet_connector_campusonline.yaml": {
+                    "contents": [
+                        "dbp_relay_cabinet_connector_campusonline:",
+                        "  api_url: '%env(CABINET_CONNECTOR_CAMPUSONLINE_API_URL)%'",
+                        "  client_id: '%env(CABINET_CONNECTOR_CAMPUSONLINE_CLIENT_ID)%'",
+                        "  client_secret: '%env(CABINET_CONNECTOR_CAMPUSONLINE_CLIENT_SECRET)%'",
+                        "  data_service_name_person_data: 'loc_api-dms.dmsstudents'",
+                        "  data_service_name_studies: 'loc_api-dms.dmsstudies'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "f58218cb0e64d8d8845e5a63ddb8492f12af156e"
+        }
+    }
+}
