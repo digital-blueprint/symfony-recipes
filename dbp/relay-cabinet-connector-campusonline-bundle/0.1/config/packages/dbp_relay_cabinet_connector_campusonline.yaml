@@ -2,5 +2,6 @@ dbp_relay_cabinet_connector_campusonline:
   api_url: '%env(CABINET_CONNECTOR_CAMPUSONLINE_API_URL)%'
   client_id: '%env(CABINET_CONNECTOR_CAMPUSONLINE_CLIENT_ID)%'
   client_secret: '%env(CABINET_CONNECTOR_CAMPUSONLINE_CLIENT_SECRET)%'
-  data_service_name_person_data: 'loc_api-dms.dmsstudents'
+  data_service_name_students: 'loc_api-dms.dmsstudents'
   data_service_name_studies: 'loc_api-dms.dmsstudies'
+  data_service_name_applications: 'loc_api-dms.dmsapplicants'
