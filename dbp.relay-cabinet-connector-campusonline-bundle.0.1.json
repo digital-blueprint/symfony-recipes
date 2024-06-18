@@ -23,14 +23,15 @@
                         "  api_url: '%env(CABINET_CONNECTOR_CAMPUSONLINE_API_URL)%'",
                         "  client_id: '%env(CABINET_CONNECTOR_CAMPUSONLINE_CLIENT_ID)%'",
                         "  client_secret: '%env(CABINET_CONNECTOR_CAMPUSONLINE_CLIENT_SECRET)%'",
-                        "  data_service_name_person_data: 'loc_api-dms.dmsstudents'",
+                        "  data_service_name_students: 'loc_api-dms.dmsstudents'",
                         "  data_service_name_studies: 'loc_api-dms.dmsstudies'",
+                        "  data_service_name_applications: 'loc_api-dms.dmsapplicants'",
                         ""
                     ],
                     "executable": false
                 }
             },
-            "ref": "f58218cb0e64d8d8845e5a63ddb8492f12af156e"
+            "ref": "dd72cd775500a80b28c02cd7632bba2bb0682d36"
         }
     }
 }
