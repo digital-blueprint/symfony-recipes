@@ -6,11 +6,5 @@ dbp_relay_cabinet:
   typesense_base_url: '%env(CABINET_TYPESENSE_BASE_URL)%'
   typesense_api_key: '%env(CABINET_TYPESENSE_API_KEY)%'
   authorization:
-      policies:
-          ROLE_GROUP_READER_METADATA: 'currentGroup.getIdentifier() in user.get("CABINET_READ_METADATA_GROUPS", [])'
-          ROLE_GROUP_READER_CONTENT: 'currentGroup.getIdentifier() in user.get("CABINET_READ_CONTENT_GROUPS", [])'
-          ROLE_GROUP_WRITER: 'currentGroup.getIdentifier() in user.get("CABINET_WRITE_GROUPS", [])'
-          ROLE_GROUP_WRITER_READ_ADDRESS: 'currentGroup.getIdentifier() in user.get("CABINET_WRITE_READ_ADDRESS_GROUPS", [])'
-          ROLE_USER: '(user.get("CABINET_WRITE_GROUPS", []) !== []) || (user.get("CABINET_READ_CONTENT_GROUPS", []) !== []) || (user.get("CABINET_READ_METADATA_GROUPS", []) !== [])'
-      attributes:
-          GROUPS: 'user.get("CABINET_ALL_GROUPS", [])'
+    policies:
+        ROLE_USER: 'true'
