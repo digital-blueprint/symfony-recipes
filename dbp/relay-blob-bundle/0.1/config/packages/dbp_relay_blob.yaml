@@ -19,6 +19,7 @@ dbp_relay_blob:
           bucket_owner: 'email@some-mail-server.com'
           max_retention_duration: 'P60D'
           link_expire_time: 'PT1M'
+          output_validation: true
           reporting:
               dsn: '%env(BLOB_MAILER_TRANSPORT_DSN)%'
               from: 'email@some-mail-server.com'
