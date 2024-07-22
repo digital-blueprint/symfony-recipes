@@ -18,12 +18,6 @@ dbp_relay_blob:
           bucket_owner: 'email@some-mail-server.com'
           max_retention_duration: 'P60D'
           link_expire_time: 'PT1M'
-          notify_quota:
-              dsn: '%env(BLOB_MAILER_TRANSPORT_DSN)%'
-              from: 'email@some-mail-server.com'
-              to: 'email@some-mail-server.com'
-              subject: 'Blob notify quota'
-              html_template: 'emails/notify-quota.html.twig'
           reporting:
               dsn: '%env(BLOB_MAILER_TRANSPORT_DSN)%'
               from: 'email@some-mail-server.com'
