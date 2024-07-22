@@ -34,6 +34,7 @@
                         "          bucket_id: 'test-bucket'",
                         "          key: 'oaYdaVWxSF8qSk73ewCMQktKhvriYSxvPBudrUQ5qSmFt334FfebTfmQZmFLaruB'",
                         "          quota: 500 # in MB",
+                        "          quota_warning_interval: \"0 7 * * *\"",
                         "          notify_when_quota_over: 70 # in percent of the quota",
                         "          report_when_expiry_in: 'P62D' # in Days, 62 = two 31 day months",
                         "          bucket_owner: 'email@some-mail-server.com'",
@@ -50,7 +51,7 @@
                     "executable": false
                 }
             },
-            "ref": "998e0b747be56053e5fe763017df585592bb20fa"
+            "ref": "0440972a4d7fa1c91a8c3b4ec3494e11d5804763"
         }
     }
 }
