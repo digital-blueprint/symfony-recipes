@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Dbp\\Relay\\CoreConnectorOidcBundle\\DbpRelayCoreConnectorOidcBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "AUTH_SERVER_URL": "https://auth.your-server/auth/realms/your-realm",
+        "AUTH_FRONTEND_CLIENT_ID": "api-docs-client-id"
+    }
+}
