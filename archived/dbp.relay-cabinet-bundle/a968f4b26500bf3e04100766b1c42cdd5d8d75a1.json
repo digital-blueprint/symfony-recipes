@@ -1,0 +1,51 @@
+{
+    "manifests": {
+        "dbp/relay-cabinet-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Dbp\\Relay\\CabinetBundle\\DbpRelayCabinetBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "CABINET_DATABASE_URL": "mysql://user:secret@mariadb:3306/db",
+                    "CABINET_BLOB_API_URL": "",
+                    "CABINET_BLOB_BUCKET_ID": "",
+                    "CABINET_BLOB_BUCKET_KEY": "",
+                    "CABINET_BLOB_IDP_URL": "",
+                    "CABINET_BLOB_IDP_CLIENT_ID": "",
+                    "CABINET_BLOB_IDP_CLIENT_SECRET": "",
+                    "CABINET_TYPESENSE_API_URL": "",
+                    "CABINET_TYPESENSE_API_KEY": ""
+                }
+            },
+            "files": {
+                "config/packages/dbp_relay_cabinet.yaml": {
+                    "contents": [
+                        "dbp_relay_cabinet:",
+                        "  database_url: '%env(CABINET_DATABASE_URL)%'",
+                        "  blob:",
+                        "    api_url: '%env(CABINET_BLOB_API_URL)%'",
+                        "    bucket_id: '%env(CABINET_BLOB_BUCKET_ID)%'",
+                        "    bucket_key: '%env(CABINET_BLOB_BUCKET_KEY)%'",
+                        "    idp_url: '%env(CABINET_BLOB_IDP_URL)%'",
+                        "    idp_client_id: '%env(CABINET_BLOB_IDP_CLIENT_ID)%'",
+                        "    idp_client_secret: '%env(CABINET_BLOB_IDP_CLIENT_SECRET)%'",
+                        "  typesense:",
+                        "    api_url: '%env(CABINET_TYPESENSE_API_URL)%'",
+                        "    api_key: '%env(CABINET_TYPESENSE_API_KEY)%'",
+                        "  authorization:",
+                        "    policies:",
+                        "        ROLE_USER: 'true'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "a968f4b26500bf3e04100766b1c42cdd5d8d75a1"
+        }
+    }
+}
