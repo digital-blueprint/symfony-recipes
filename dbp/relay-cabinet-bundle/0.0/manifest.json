@@ -7,10 +7,13 @@
     },
     "env": {
         "CABINET_DATABASE_URL": "mysql://user:secret@mariadb:3306/db",
-        "CABINET_BLOB_BASE_URL": "",
+        "CABINET_BLOB_API_URL": "",
         "CABINET_BLOB_BUCKET_ID": "",
-        "CABINET_BLOB_KEY": "",
-        "CABINET_TYPESENSE_BASE_URL": "",
+        "CABINET_BLOB_BUCKET_KEY": "",
+        "CABINET_BLOB_IDP_URL": "",
+        "CABINET_BLOB_IDP_CLIENT_ID": "",
+        "CABINET_BLOB_IDP_CLIENT_SECRET": "",
+        "CABINET_TYPESENSE_API_URL": "",
         "CABINET_TYPESENSE_API_KEY": ""
     }
 }
