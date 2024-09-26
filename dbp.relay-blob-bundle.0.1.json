@@ -38,7 +38,6 @@
                         "          notify_when_quota_over: 70 # in percent of the quota",
                         "          report_when_expiry_in: 'P62D' # in Days, 62 = two 31 day months",
                         "          bucket_owner: 'email@some-mail-server.com'",
-                        "          max_retention_duration: 'P60D'",
                         "          link_expire_time: 'PT1M'",
                         "          output_validation: true",
                         "          reporting:",
@@ -52,7 +51,7 @@
                     "executable": false
                 }
             },
-            "ref": "0b1790f5362125694564feafaaba8891e0ad99db"
+            "ref": "b375aa1513d9fe83a77870d488743555b604738a"
         }
     }
 }
