@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "dbp/relay-blob-connector-filesystem-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Dbp\\Relay\\BlobConnectorFilesystemBundle\\DbpRelayBlobConnectorFilesystemBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "BLOB_CONNECTOR_FILESYSTEM_PATH": "%kernel.project_dir%/var/blobFiles",
+                    "BLOB_CONNECTOR_FILESYSTEM_LINK_URL": "http://127.0.0.1:8000/"
+                }
+            },
+            "files": {
+                "config/packages/dbp_relay_blob_connector_filesystem.yaml": {
+                    "contents": [
+                        "dbp_relay_blob_connector_filesystem:",
+                        "  path: '%env(BLOB_CONNECTOR_FILESYSTEM_PATH)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "7d64479cc8174b482590488f514843dc7569e07c"
+        }
+    }
+}
