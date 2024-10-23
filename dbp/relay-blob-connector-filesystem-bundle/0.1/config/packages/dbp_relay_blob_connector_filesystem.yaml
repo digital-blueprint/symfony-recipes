@@ -1,3 +1,2 @@
 dbp_relay_blob_connector_filesystem:
   path: '%env(BLOB_CONNECTOR_FILESYSTEM_PATH)%'
-  link_url: '%env(BLOB_CONNECTOR_FILESYSTEM_LINK_URL)%'
