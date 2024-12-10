@@ -4,3 +4,11 @@ dbp_relay_verity:
       url: 'https://dummy.url/'
       validator: 'Dbp\Relay\VerityBundle\Tests\Helper\DummyAPI'
       maxsize: 16
+  profiles:
+    unit_test:
+      name: 'Testing the Check'
+      rule: 'a.validity == true'
+      checks:
+        a:
+          backend: 'dummy'
+          config: '{}'
