@@ -1,0 +1,40 @@
+{
+    "manifests": {
+        "dbp/relay-verity-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Dbp\\Relay\\VerityBundle\\DbpRelayVerityBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": []
+            },
+            "files": {
+                "config/packages/dbp_relay_verity.yaml": {
+                    "contents": [
+                        "dbp_relay_verity:",
+                        "  backends:",
+                        "    dummy:",
+                        "      url: 'https://dummy.url/'",
+                        "      validator: 'Dbp\\Relay\\VerityBundle\\Tests\\Helper\\DummyAPI'",
+                        "      maxsize: 16",
+                        "  profiles:",
+                        "    unit_test:",
+                        "      name: 'Testing the Check'",
+                        "      rule: 'a.validity == true'",
+                        "      checks:",
+                        "        a:",
+                        "          backend: 'dummy'",
+                        "          config: '{}'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "d9b5cb810a0740fdfa1d5ccce94c64cd3a927ee1"
+        }
+    }
+}
