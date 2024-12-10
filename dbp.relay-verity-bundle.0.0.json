@@ -20,12 +20,20 @@
                         "      url: 'https://dummy.url/'",
                         "      validator: 'Dbp\\Relay\\VerityBundle\\Tests\\Helper\\DummyAPI'",
                         "      maxsize: 16",
+                        "  profiles:",
+                        "    unit_test:",
+                        "      name: 'Testing the Check'",
+                        "      rule: 'a.validity == true'",
+                        "      checks:",
+                        "        a:",
+                        "          backend: 'dummy'",
+                        "          config: '{}'",
                         ""
                     ],
                     "executable": false
                 }
             },
-            "ref": "1204c20da7671312b4f7c61fb09eab84462f319a"
+            "ref": "255c40754604c95032aaf99fa558bceb34072a35"
         }
     }
 }
