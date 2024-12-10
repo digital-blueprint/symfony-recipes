@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "Dbp\\Relay\\VerityConnectorVerapdfBundle\\DbpRelayVerityConnectorVerapdfBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "VERITY_CONNECTOR_VERAPDF_URL": "http://localhost:8080"
+    }
+}

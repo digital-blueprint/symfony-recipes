@@ -1,0 +1,3 @@
+dbp_relay_verity_connector_verapdf:
+  url: '%env(VERITY_CONNECTOR_VERAPDF_URL)%'
+  maxsize: '1000000'
