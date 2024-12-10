@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Dbp\\Relay\\VerityBundle\\DbpRelayVerityBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
