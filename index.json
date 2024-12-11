@@ -80,6 +80,9 @@
         ],
         "dbp/relay-verity-bundle": [
             "0.1"
+        ],
+        "dbp/relay-verity-connector-verapdf-bundle": [
+            "0.1"
         ]
     },
     "recipe-conflicts": [],
