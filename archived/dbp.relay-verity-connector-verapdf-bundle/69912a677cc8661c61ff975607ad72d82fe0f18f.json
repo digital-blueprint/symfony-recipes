@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "dbp/relay-verity-connector-verapdf-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Dbp\\Relay\\VerityConnectorVerapdfBundle\\DbpRelayVerityConnectorVerapdfBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "VERITY_CONNECTOR_VERAPDF_URL": "http://localhost:8080"
+                }
+            },
+            "files": {
+                "config/packages/dbp_relay_verity_connector_verapdf.yaml": {
+                    "contents": [
+                        "dbp_relay_verity_connector_verapdf:",
+                        "  url: '%env(VERITY_CONNECTOR_VERAPDF_URL)%'",
+                        "  maxsize: '1000000'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "69912a677cc8661c61ff975607ad72d82fe0f18f"
+        }
+    }
+}
