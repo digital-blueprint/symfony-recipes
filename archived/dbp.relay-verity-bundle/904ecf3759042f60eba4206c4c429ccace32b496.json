@@ -1,0 +1,38 @@
+{
+    "manifests": {
+        "dbp/relay-verity-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Dbp\\Relay\\VerityBundle\\DbpRelayVerityBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": []
+            },
+            "files": {
+                "config/packages/dbp_relay_verity.yaml": {
+                    "contents": [
+                        "dbp_relay_verity:",
+                        "  backends:",
+                        "    dummy:",
+                        "      validator: 'Dbp\\Relay\\VerityBundle\\Tests\\Helper\\DummyAPI'",
+                        "  profiles:",
+                        "    unit_test:",
+                        "      name: 'Testing the Check'",
+                        "      rule: 'a.validity == true'",
+                        "      checks:",
+                        "        a:",
+                        "          backend: 'dummy'",
+                        "          config: '{}'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "904ecf3759042f60eba4206c4c429ccace32b496"
+        }
+    }
+}
