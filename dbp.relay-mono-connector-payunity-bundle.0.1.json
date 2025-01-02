@@ -14,7 +14,8 @@
                     "MONO_CONNECTOR_PAYUNITY_DATABASE_URL": "mysql://user:secret@mariadb:3306/db?serverVersion=mariadb-10.3.30",
                     "MONO_CONNECTOR_PAYUNITY_ENTITY_ID": "",
                     "MONO_CONNECTOR_PAYUNITY_ACCESS_TOKEN": "",
-                    "MONO_CONNECTOR_PAYUNITY_WEBHOOK_SECRET": ""
+                    "MONO_CONNECTOR_PAYUNITY_WEBHOOK_SECRET": "",
+                    "MONO_CONNECTOR_PAYUNITY_API_URL": ""
                 }
             },
             "files": {
@@ -38,7 +39,7 @@
                     "executable": false
                 }
             },
-            "ref": "61063612198459194cb55cd6cfb7ea115beee19b"
+            "ref": "c4bf4ca5bd8ae39437dd07547009ab25972173ad"
         }
     }
 }
