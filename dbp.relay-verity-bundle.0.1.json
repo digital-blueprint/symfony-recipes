@@ -18,9 +18,7 @@
                         "dbp_relay_verity:",
                         "  backends:",
                         "    dummy:",
-                        "      url: 'https://dummy.url/'",
                         "      validator: 'Dbp\\Relay\\VerityBundle\\Tests\\Helper\\DummyAPI'",
-                        "      maxsize: 16",
                         "  profiles:",
                         "    unit_test:",
                         "      name: 'Testing the Check'",
@@ -34,7 +32,7 @@
                     "executable": false
                 }
             },
-            "ref": "d9b5cb810a0740fdfa1d5ccce94c64cd3a927ee1"
+            "ref": "904ecf3759042f60eba4206c4c429ccace32b496"
         }
     }
 }
