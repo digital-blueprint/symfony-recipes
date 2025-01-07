@@ -49,7 +49,8 @@
         ],
         "dbp/relay-esign-bundle": [
             "0.2",
-            "0.3"
+            "0.3",
+            "0.4"
         ],
         "dbp/relay-formalize-bundle": [
             "0.1"
