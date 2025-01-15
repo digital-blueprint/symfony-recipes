@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "dbp/relay-nexus-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Dbp\\Relay\\NexusBundle\\DbpRelayNexusBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": []
+            },
+            "files": {
+                "config/packages/dbp_relay_nexus.yaml": {
+                    "contents": [
+                        "dbp_relay_nexus:",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "97b43ee65ce03a779af86053b7cd9a8ee1aca6de"
+        }
+    }
+}
