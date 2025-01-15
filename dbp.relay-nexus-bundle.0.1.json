@@ -13,7 +13,7 @@
                 "env": []
             },
             "files": {
-                "config/packages/dbp_nexus_verity.yaml": {
+                "config/packages/dbp_relay_nexus.yaml": {
                     "contents": [
                         "dbp_relay_nexus:",
                         ""
@@ -21,7 +21,7 @@
                     "executable": false
                 }
             },
-            "ref": "dcc230b79a7d9d6b8aa356a30fe655b5f7c9a1ae"
+            "ref": "97b43ee65ce03a779af86053b7cd9a8ee1aca6de"
         }
     }
 }
