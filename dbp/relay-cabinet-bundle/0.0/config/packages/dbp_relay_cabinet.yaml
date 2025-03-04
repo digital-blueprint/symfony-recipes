@@ -11,5 +11,5 @@ dbp_relay_cabinet:
     api_url: '%env(CABINET_TYPESENSE_API_URL)%'
     api_key: '%env(CABINET_TYPESENSE_API_KEY)%'
   authorization:
-    policies:
+    roles:
         ROLE_USER: 'true'
