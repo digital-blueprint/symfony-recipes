@@ -1,0 +1,7 @@
+dbp_relay_nexus:
+    typesense:
+        api_url: '%env(NEXUS_TYPESENSE_BASE_URL)%'
+        api_key: '%env(NEXUS_TYPESENSE_API_KEY)%'
+    authorization:
+        policies:
+            ROLE_USER: 'user.get("ROLE_DEVELOPER")'

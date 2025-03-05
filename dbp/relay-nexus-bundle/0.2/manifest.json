@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Dbp\\Relay\\NexusBundle\\DbpRelayNexusBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "NEXUS_TYPESENSE_BASE_URL": "",
+        "NEXUS_TYPESENSE_API_KEY": ""
+    }
+}
