@@ -75,7 +75,8 @@
             "0.1"
         ],
         "dbp/relay-nexus-bundle": [
-            "0.1"
+            "0.1",
+            "0.2"
         ],
         "dbp/relay-sublibrary-bundle": [
             "0.1",
