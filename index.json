@@ -65,7 +65,8 @@
             "0.1"
         ],
         "dbp/relay-mono-bundle": [
-            "0.3"
+            "0.3",
+            "0.5"
         ],
         "dbp/relay-mono-connector-campusonline-bundle": [
             "0.1",
