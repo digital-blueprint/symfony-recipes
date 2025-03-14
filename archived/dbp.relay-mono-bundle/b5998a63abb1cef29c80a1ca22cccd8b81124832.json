@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "dbp/relay-mono-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Dbp\\Relay\\MonoBundle\\DbpRelayMonoBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "MONO_DATABASE_URL": "mysql://user:secret@mariadb:3306/db"
+                }
+            },
+            "files": {
+                "config/packages/dbp_relay_mono.yaml": {
+                    "contents": [
+                        "dbp_relay_mono:",
+                        "  database_url: '%env(MONO_DATABASE_URL)'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "b5998a63abb1cef29c80a1ca22cccd8b81124832"
+        }
+    }
+}
