@@ -1,0 +1,2 @@
+dbp_relay_mono:
+  database_url: '%env(MONO_DATABASE_URL)'
