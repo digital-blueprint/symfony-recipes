@@ -1,0 +1,43 @@
+{
+    "manifests": {
+        "dbp/relay-mono-connector-payunity-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Dbp\\Relay\\MonoConnectorPayunityBundle\\DbpRelayMonoConnectorPayunityBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "MONO_CONNECTOR_PAYUNITY_DATABASE_URL": "mysql://user:secret@mariadb:3306/db?serverVersion=mariadb-10.3.30",
+                    "MONO_CONNECTOR_PAYUNITY_ENTITY_ID": "",
+                    "MONO_CONNECTOR_PAYUNITY_ACCESS_TOKEN": "",
+                    "MONO_CONNECTOR_PAYUNITY_WEBHOOK_SECRET": "",
+                    "MONO_CONNECTOR_PAYUNITY_API_URL": ""
+                }
+            },
+            "files": {
+                "config/packages/dbp_relay_mono_connector_payunity.yaml": {
+                    "contents": [
+                        "dbp_relay_mono_connector_payunity:",
+                        "  database_url: '%env(MONO_CONNECTOR_PAYUNITY_DATABASE_URL)%'",
+                        "  payment_contracts:",
+                        "    payunity_flex:",
+                        "      api_url: '%env(MONO_CONNECTOR_PAYUNITY_API_URL)%'",
+                        "      entity_id: '%env(MONO_CONNECTOR_PAYUNITY_ENTITY_ID)%'",
+                        "      access_token: '%env(MONO_CONNECTOR_PAYUNITY_ACCESS_TOKEN)%'",
+                        "      webhook_secret: '%env(MONO_CONNECTOR_PAYUNITY_WEBHOOK_SECRET)%'",
+                        "      payment_methods:",
+                        "        creditcard:",
+                        "          brands: ['MASTER', 'VISA']",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "a74af3845ce87137f31568c8e373590b62a24418"
+        }
+    }
+}
