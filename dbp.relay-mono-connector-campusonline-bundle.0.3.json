@@ -1,0 +1,36 @@
+{
+    "manifests": {
+        "dbp/relay-mono-connector-campusonline-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Dbp\\Relay\\MonoConnectorCampusonlineBundle\\DbpRelayMonoConnectorCampusonlineBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "MONO_CONNECTOR_CAMPUSONLINE_API_URL": "",
+                    "MONO_CONNECTOR_CAMPUSONLINE_CLIENT_ID": "",
+                    "MONO_CONNECTOR_CAMPUSONLINE_CLIENT_SECRET": ""
+                }
+            },
+            "files": {
+                "config/packages/dbp_relay_mono_connector_campusonline.yaml": {
+                    "contents": [
+                        "dbp_relay_mono_connector_campusonline:",
+                        "  tuition_fees:",
+                        "    tuition_fee_co:",
+                        "      api_url: '%env(resolve:MONO_CONNECTOR_CAMPUSONLINE_API_URL)%'",
+                        "      client_id: '%env(MONO_CONNECTOR_CAMPUSONLINE_CLIENT_ID)%'",
+                        "      client_secret: '%env(MONO_CONNECTOR_CAMPUSONLINE_CLIENT_SECRET)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "b8d0577ac5b7ff501d5fb75fb891404c84a7036f"
+        }
+    }
+}
