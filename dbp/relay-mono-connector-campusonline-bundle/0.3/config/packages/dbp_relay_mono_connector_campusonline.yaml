@@ -1,0 +1,6 @@
+dbp_relay_mono_connector_campusonline:
+  tuition_fees:
+    tuition_fee_co:
+      api_url: '%env(resolve:MONO_CONNECTOR_CAMPUSONLINE_API_URL)%'
+      client_id: '%env(MONO_CONNECTOR_CAMPUSONLINE_CLIENT_ID)%'
+      client_secret: '%env(MONO_CONNECTOR_CAMPUSONLINE_CLIENT_SECRET)%'
