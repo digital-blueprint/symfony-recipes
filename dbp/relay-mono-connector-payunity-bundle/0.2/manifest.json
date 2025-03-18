@@ -1,0 +1,15 @@
+{
+    "bundles": {
+        "Dbp\\Relay\\MonoConnectorPayunityBundle\\DbpRelayMonoConnectorPayunityBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "MONO_CONNECTOR_PAYUNITY_DATABASE_URL": "mysql://user:secret@mariadb:3306/db?serverVersion=mariadb-10.3.30",
+        "MONO_CONNECTOR_PAYUNITY_ENTITY_ID": "",
+        "MONO_CONNECTOR_PAYUNITY_ACCESS_TOKEN": "",
+        "MONO_CONNECTOR_PAYUNITY_WEBHOOK_SECRET": "",
+        "MONO_CONNECTOR_PAYUNITY_API_URL": ""
+    }
+}
