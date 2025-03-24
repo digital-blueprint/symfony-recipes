@@ -20,12 +20,13 @@
                     "contents": [
                         "dbp_relay_blob_connector_filesystem:",
                         "  path: '%env(BLOB_CONNECTOR_FILESYSTEM_PATH)%'",
+                        "  create_path: true",
                         ""
                     ],
                     "executable": false
                 }
             },
-            "ref": "7d64479cc8174b482590488f514843dc7569e07c"
+            "ref": "1464c10f25d43be9825d6314dd43309a62606a8d"
         }
     }
 }
