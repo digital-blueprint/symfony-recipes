@@ -1,2 +1,3 @@
 dbp_relay_blob_connector_filesystem:
   path: '%env(BLOB_CONNECTOR_FILESYSTEM_PATH)%'
+  create_path: true
