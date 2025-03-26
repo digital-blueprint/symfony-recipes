@@ -1,0 +1,35 @@
+{
+    "manifests": {
+        "dbp/relay-base-organization-connector-campusonline-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Dbp\\Relay\\BaseOrganizationConnectorCampusonlineBundle\\DbpRelayBaseOrganizationConnectorCampusonlineBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "CAMPUS_ONLINE_API_URL": "",
+                    "CAMPUS_ONLINE_API_TOKEN": "",
+                    "CAMPUS_ONLINE_ORGANIZATION_ROOT_ID": ""
+                }
+            },
+            "files": {
+                "config/packages/dbp_relay_base_organization_connector_campusonline.yaml": {
+                    "contents": [
+                        "dbp_relay_base_organization_connector_campusonline:",
+                        "  campus_online:",
+                        "    api_url: '%env(CAMPUS_ONLINE_API_URL)%'",
+                        "    api_token: '%env(CAMPUS_ONLINE_API_TOKEN)%'",
+                        "    org_root_id: '%env(CAMPUS_ONLINE_ORGANIZATION_ROOT_ID)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "0c624420d3a7088527d7a41e9c89f7b475e640a8"
+        }
+    }
+}
