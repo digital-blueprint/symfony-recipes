@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "Dbp\\Relay\\BaseOrganizationConnectorCampusonlineBundle\\DbpRelayBaseOrganizationConnectorCampusonlineBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "CAMPUS_ONLINE_API_URL": "",
+        "CAMPUS_ONLINE_API_TOKEN": "",
+        "CAMPUS_ONLINE_ORGANIZATION_ROOT_ID": ""
+    }
+}
