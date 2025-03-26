@@ -8,7 +8,6 @@
     "env": {
         "ALMA_API_URL": "https://api-eu.hosted.exlibrisgroup.com",
         "ALMA_API_KEY": "",
-        "ALMA_ANALYTICS_API_KEY": "",
-        "ALMA_READONLY": ""
+        "ALMA_ANALYTICS_API_KEY": ""
     }
 }
