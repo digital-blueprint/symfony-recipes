@@ -1,0 +1,26 @@
+{
+    "manifests": {
+        "dbp/relay-base-organization-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Dbp\\Relay\\BaseOrganizationBundle\\DbpRelayBaseOrganizationBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/dbp_relay_base_organization.yaml": {
+                    "contents": [
+                        "dbp_relay_base_organization:",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "dd6e259d7864069800fbe6bcc646816219dfdfd3"
+        }
+    }
+}
