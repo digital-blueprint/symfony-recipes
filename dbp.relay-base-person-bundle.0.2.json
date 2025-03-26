@@ -1,0 +1,26 @@
+{
+    "manifests": {
+        "dbp/relay-base-person-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Dbp\\Relay\\BasePersonBundle\\DbpRelayBasePersonBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/dbp_relay_base_person.yaml": {
+                    "contents": [
+                        "dbp_relay_base_person:",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "41f57a8a43a976ef5c2f2f85dba2559b40e23577"
+        }
+    }
+}
