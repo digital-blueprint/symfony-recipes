@@ -87,6 +87,9 @@
             "0.4",
             "0.5"
         ],
+        "dbp/relay-sublibrary-connector-campusonline-bundle": [
+            "0.3"
+        ],
         "dbp/relay-verity-bundle": [
             "0.1"
         ],

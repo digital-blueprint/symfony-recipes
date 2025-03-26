@@ -1,0 +1,15 @@
+{
+    "manifests": {
+        "dbp/relay-sublibrary-connector-campusonline-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Dbp\\Relay\\SublibraryConnectorCampusonlineBundle\\DbpRelaySublibraryConnectorCampusonlineBundle": [
+                        "all"
+                    ]
+                }
+            },
+            "files": [],
+            "ref": "fb88faaf9d36e1eefa3633a1e88ab4c6de27b097"
+        }
+    }
+}
