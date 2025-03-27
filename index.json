@@ -64,6 +64,9 @@
         "dbp/relay-formalize-bundle": [
             "0.1"
         ],
+        "dbp/relay-frontend-bundle": [
+            "0.1"
+        ],
         "dbp/relay-greenlight-bundle": [
             "0.1"
         ],

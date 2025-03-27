@@ -1,0 +1,26 @@
+{
+    "manifests": {
+        "dbp/relay-frontend-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Dbp\\Relay\\FrontendBundle\\DbpRelayFrontendBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/dbp_relay_frontend.yaml": {
+                    "contents": [
+                        "dbp_relay_frontend:",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "cd15895620000a195730b0a69c7d90caef716792"
+        }
+    }
+}
