@@ -1,7 +1,7 @@
 dbp_relay_sublibrary:
-    api_url: '%env(ALMA_API_URL)%'
-    api_key: '%env(ALMA_API_KEY)%'
-    analytics_api_key: '%env(ALMA_ANALYTICS_API_KEY)%'
+    api_url: '%env(SUBLIBRARY_ALMA_API_URL)%'
+    api_key: '%env(SUBLIBRARY_ALMA_API_KEY)%'
+    analytics_api_key: '%env(SUBLIBRARY_ALMA_ANALYTICS_API_KEY)%'
     authorization:
         roles:
             ROLE_LIBRARY_MANAGER: 'false'
