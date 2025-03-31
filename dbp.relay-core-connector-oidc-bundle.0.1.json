@@ -11,22 +11,22 @@
                     "config/": "%CONFIG_DIR%/"
                 },
                 "env": {
-                    "AUTH_SERVER_URL": "https://auth.your-server/auth/realms/your-realm",
-                    "AUTH_FRONTEND_CLIENT_ID": "api-docs-client-id"
+                    "OIDC_SERVER_URL": "https://auth.your-server/auth/realms/your-realm",
+                    "OIDC_FRONTEND_CLIENT_ID": "api-docs-client-id"
                 }
             },
             "files": {
                 "config/packages/dbp_relay_core_connector_oidc.yaml": {
                     "contents": [
                         "dbp_relay_core_connector_oidc:",
-                        "  server_url: '%env(AUTH_SERVER_URL)%'",
-                        "  frontend_client_id: '%env(AUTH_FRONTEND_CLIENT_ID)%'",
+                        "  server_url: '%env(OIDC_SERVER_URL)%'",
+                        "  frontend_client_id: '%env(OIDC_FRONTEND_CLIENT_ID)%'",
                         ""
                     ],
                     "executable": false
                 }
             },
-            "ref": "d23f67111b118b835ea0b71ba4c04953613f5132"
+            "ref": "1a2f5a9ca501df1ca514f951cbee53af53ce0d2d"
         }
     }
 }
