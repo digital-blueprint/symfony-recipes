@@ -1,0 +1,40 @@
+{
+    "manifests": {
+        "dbp/relay-core-connector-ldap-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Dbp\\Relay\\CoreConnectorLdapBundle\\DbpRelayCoreConnectorLdapBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "LDAP_HOST": "directory.yourdomain.at",
+                    "LDAP_BASE_DN": "o=dbp",
+                    "LDAP_USER": "user",
+                    "LDAP_PASS": "pass"
+                }
+            },
+            "files": {
+                "config/packages/dbp_relay_core_connector_ldap.yaml": {
+                    "contents": [
+                        "dbp_relay_core_connector_ldap:",
+                        "    connections:",
+                        "        DEFAULT:",
+                        "          host: '%env(LDAP_HOST)%'",
+                        "          base_dn: '%env(LDAP_BASE_DN)%'",
+                        "          username: '%env(LDAP_USER)%'",
+                        "          password: '%env(LDAP_PASS)%'",
+                        "    user_attribute_provider:",
+                        "        ldap_connection: DEFAULT",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "37d5c63450bdccc9ba63628e04295580412b0c1a"
+        }
+    }
+}
