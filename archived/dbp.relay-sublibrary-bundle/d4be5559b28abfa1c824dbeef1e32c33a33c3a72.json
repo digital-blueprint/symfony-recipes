@@ -1,0 +1,43 @@
+{
+    "manifests": {
+        "dbp/relay-sublibrary-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Dbp\\Relay\\SublibraryBundle\\DbpRelaySublibraryBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "SUBLIBRARY_ALMA_API_URL": "https://api-eu.hosted.exlibrisgroup.com",
+                    "SUBLIBRARY_ALMA_API_KEY": "",
+                    "SUBLIBRARY_ALMA_ANALYTICS_API_KEY": ""
+                }
+            },
+            "files": {
+                "config/packages/dbp_relay_sublibrary.yaml": {
+                    "contents": [
+                        "dbp_relay_sublibrary:",
+                        "    api_url: '%env(SUBLIBRARY_ALMA_API_URL)%'",
+                        "    api_key: '%env(SUBLIBRARY_ALMA_API_KEY)%'",
+                        "    analytics_api_key: '%env(SUBLIBRARY_ALMA_ANALYTICS_API_KEY)%'",
+                        "    person_local_data_attributes:",
+                        "        email: email",
+                        "        alma_id: almaId",
+                        "    authorization:",
+                        "        roles:",
+                        "            ROLE_LIBRARY_MANAGER: 'false'",
+                        "        attributes:",
+                        "            SUBLIBRARY_IDS: '[]'",
+                        "            ALMA_LIBRARY_IDS: '[]'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "d4be5559b28abfa1c824dbeef1e32c33a33c3a72"
+        }
+    }
+}
