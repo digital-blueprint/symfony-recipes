@@ -23,6 +23,9 @@
                         "    api_url: '%env(SUBLIBRARY_ALMA_API_URL)%'",
                         "    api_key: '%env(SUBLIBRARY_ALMA_API_KEY)%'",
                         "    analytics_api_key: '%env(SUBLIBRARY_ALMA_ANALYTICS_API_KEY)%'",
+                        "    person_local_data_attributes:",
+                        "        email: email",
+                        "        alma_id: almaId",
                         "    authorization:",
                         "        roles:",
                         "            ROLE_LIBRARY_MANAGER: 'false'",
@@ -34,7 +37,7 @@
                     "executable": false
                 }
             },
-            "ref": "193e96b12334650a77951d34d4e17e04f39929ba"
+            "ref": "d4be5559b28abfa1c824dbeef1e32c33a33c3a72"
         }
     }
 }
