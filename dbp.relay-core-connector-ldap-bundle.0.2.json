@@ -22,7 +22,7 @@
                     "contents": [
                         "dbp_relay_core_connector_ldap:",
                         "    connections:",
-                        "        - identifier: DEFAULT",
+                        "        DEFAULT:",
                         "          host: '%env(LDAP_HOST)%'",
                         "          base_dn: '%env(LDAP_BASE_DN)%'",
                         "          username: '%env(LDAP_USER)%'",
@@ -34,7 +34,7 @@
                     "executable": false
                 }
             },
-            "ref": "8407a0b130b2941c8485f1bb5a3337f67a915ea9"
+            "ref": "37d5c63450bdccc9ba63628e04295580412b0c1a"
         }
     }
 }
