@@ -5,6 +5,8 @@ dbp_relay_sublibrary:
     person_local_data_attributes:
         email: email
         alma_id: almaId
+    organization_local_data_attributes:
+        code: code
     authorization:
         roles:
             ROLE_LIBRARY_MANAGER: 'false'
