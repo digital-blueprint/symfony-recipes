@@ -26,6 +26,8 @@
                         "    person_local_data_attributes:",
                         "        email: email",
                         "        alma_id: almaId",
+                        "    organization_local_data_attributes:",
+                        "        code: code",
                         "    authorization:",
                         "        roles:",
                         "            ROLE_LIBRARY_MANAGER: 'false'",
@@ -37,7 +39,7 @@
                     "executable": false
                 }
             },
-            "ref": "d4be5559b28abfa1c824dbeef1e32c33a33c3a72"
+            "ref": "b273098e0160d6c317e76c365c90a8751b878dda"
         }
     }
 }
