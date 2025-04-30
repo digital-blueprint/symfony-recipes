@@ -1,0 +1,3 @@
+dbp_relay_verity_connector_clamav:
+    url: '%env(CLAMAV_URI)%'
+    maxsize: 33554432
