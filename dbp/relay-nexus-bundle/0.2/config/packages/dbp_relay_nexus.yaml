@@ -3,5 +3,5 @@ dbp_relay_nexus:
         api_url: '%env(NEXUS_TYPESENSE_BASE_URL)%'
         api_key: '%env(NEXUS_TYPESENSE_API_KEY)%'
     authorization:
-        policies:
+        roles:
             ROLE_USER: 'user.get("ROLE_DEVELOPER")'
