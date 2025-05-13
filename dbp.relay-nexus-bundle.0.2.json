@@ -23,14 +23,14 @@
                         "        api_url: '%env(NEXUS_TYPESENSE_BASE_URL)%'",
                         "        api_key: '%env(NEXUS_TYPESENSE_API_KEY)%'",
                         "    authorization:",
-                        "        policies:",
+                        "        roles:",
                         "            ROLE_USER: 'user.get(\"ROLE_DEVELOPER\")'",
                         ""
                     ],
                     "executable": false
                 }
             },
-            "ref": "be2415ecef52f6b585b70a529332e609fa962c84"
+            "ref": "289f288b47fc63400cd18bb8a121e1baa7bc364a"
         }
     }
 }
