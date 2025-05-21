@@ -1,0 +1,5 @@
+dbp_relay_formalize:
+  database_url: '%env(FORMALIZE_DATABASE_URL)%'
+  blob_library:
+      bucket_identifier: '%env(FORMALIZE_SUBMITTED_FILES_BUCKET_ID)%'
+      use_http_mode: false
