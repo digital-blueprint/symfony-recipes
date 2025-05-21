@@ -1,0 +1,56 @@
+{
+    "manifests": {
+        "dbp/relay-dispatch-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Dbp\\Relay\\DispatchBundle\\DbpRelayDispatchBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "DISPATCH_DATABASE_URL": "mysql://user:secret@mariadb:3306/db",
+                    "DISPATCH_SERVICE_URL": "https://dualtest.vendo.at",
+                    "DISPATCH_SENDER_PROFILE": "enter-sender-profile-here",
+                    "DISPATCH_SENDER_PROFILE_VERSION": "1.0",
+                    "DISPATCH_CERT": "base64-cert-here",
+                    "DISPATCH_CERT_PASSWORD": "enter-password-here",
+                    "DISPATCH_FILE_STORAGE": "database",
+                    "DISPATCH_BLOB_BUCKET_ID": ""
+                }
+            },
+            "files": {
+                "config/packages/dbp_relay_dispatch.yaml": {
+                    "contents": [
+                        "dbp_relay_dispatch:",
+                        "  database_url: '%env(DISPATCH_DATABASE_URL)%'",
+                        "  service_url: '%env(DISPATCH_SERVICE_URL)%'",
+                        "  sender_profile: '%env(DISPATCH_SENDER_PROFILE)%'",
+                        "  sender_profile_version: '%env(DISPATCH_SENDER_PROFILE_VERSION)%'",
+                        "  cert: '%env(base64:DISPATCH_CERT)%'",
+                        "  cert_password: '%env(DISPATCH_CERT_PASSWORD)%'",
+                        "  file_storage: '%env(DISPATCH_FILE_STORAGE)%'",
+                        "  blob_library:",
+                        "      bucket_identifier: '%env(DISPATCH_BLOB_BUCKET_ID)%'",
+                        "      use_http_mode: false",
+                        "  authorization:",
+                        "      roles:",
+                        "          ROLE_USER: '(user.get(\"DISPATCH_WRITE_GROUPS\", []) !== []) || (user.get(\"DISPATCH_READ_CONTENT_GROUPS\", []) !== []) || (user.get(\"DISPATCH_READ_METADATA_GROUPS\", []) !== [])'",
+                        "      resource_permissions:",
+                        "          ROLE_GROUP_READER_METADATA: 'resource.getIdentifier() in user.get(\"DISPATCH_READ_METADATA_GROUPS\", [])'",
+                        "          ROLE_GROUP_READER_CONTENT: 'resource.getIdentifier() in user.get(\"DISPATCH_READ_CONTENT_GROUPS\", [])'",
+                        "          ROLE_GROUP_WRITER: 'resource.getIdentifier() in user.get(\"DISPATCH_WRITE_GROUPS\", [])'",
+                        "          ROLE_GROUP_WRITER_READ_ADDRESS: 'resource.getIdentifier() in user.get(\"DISPATCH_WRITE_READ_ADDRESS_GROUPS\", [])'",
+                        "      attributes:",
+                        "          GROUPS: 'user.get(\"DISPATCH_ALL_GROUPS\", [])'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "04b2b89e1ec91bbf8aa8e72af8205e2d9da655d8"
+        }
+    }
+}
