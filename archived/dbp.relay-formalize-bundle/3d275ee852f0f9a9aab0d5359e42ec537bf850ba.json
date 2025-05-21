@@ -1,0 +1,34 @@
+{
+    "manifests": {
+        "dbp/relay-formalize-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Dbp\\Relay\\FormalizeBundle\\DbpRelayFormalizeBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "FORMALIZE_DATABASE_URL": "mysql://user:secret@mariadb:3306/db",
+                    "FORMALIZE_SUBMITTED_FILES_BUCKET_ID": "formalize-submitted-files-bucket"
+                }
+            },
+            "files": {
+                "config/packages/dbp_relay_formalize.yaml": {
+                    "contents": [
+                        "dbp_relay_formalize:",
+                        "  database_url: '%env(FORMALIZE_DATABASE_URL)%'",
+                        "  blob_library:",
+                        "      bucket_identifier: '%env(FORMALIZE_SUBMITTED_FILES_BUCKET_ID)%'",
+                        "      use_http_mode: false",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "3d275ee852f0f9a9aab0d5359e42ec537bf850ba"
+        }
+    }
+}
