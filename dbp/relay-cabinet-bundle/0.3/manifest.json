@@ -1,0 +1,14 @@
+{
+    "bundles": {
+        "Dbp\\Relay\\CabinetBundle\\DbpRelayCabinetBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "CABINET_DATABASE_URL": "mysql://user:secret@mariadb:3306/db",
+        "CABINET_BLOB_BUCKET_ID": "cabinet-bucket",
+        "CABINET_TYPESENSE_API_URL": "",
+        "CABINET_TYPESENSE_API_KEY": ""
+    }
+}

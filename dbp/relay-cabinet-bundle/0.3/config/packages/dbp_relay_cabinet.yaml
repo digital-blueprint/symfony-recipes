@@ -1,0 +1,11 @@
+dbp_relay_cabinet:
+  database_url: '%env(CABINET_DATABASE_URL)%'
+  typesense:
+    api_url: '%env(CABINET_TYPESENSE_API_URL)%'
+    api_key: '%env(CABINET_TYPESENSE_API_KEY)%'
+  authorization:
+    roles:
+        ROLE_USER: 'true'
+  blob_library:
+    bucket_identifier: "%env(CABINET_BLOB_BUCKET_ID)%"
+    use_http_mode: false
