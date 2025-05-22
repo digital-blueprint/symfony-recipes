@@ -1,0 +1,42 @@
+{
+    "manifests": {
+        "dbp/relay-cabinet-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Dbp\\Relay\\CabinetBundle\\DbpRelayCabinetBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "CABINET_DATABASE_URL": "mysql://user:secret@mariadb:3306/db",
+                    "CABINET_BLOB_BUCKET_ID": "cabinet-bucket",
+                    "CABINET_TYPESENSE_API_URL": "",
+                    "CABINET_TYPESENSE_API_KEY": ""
+                }
+            },
+            "files": {
+                "config/packages/dbp_relay_cabinet.yaml": {
+                    "contents": [
+                        "dbp_relay_cabinet:",
+                        "  database_url: '%env(CABINET_DATABASE_URL)%'",
+                        "  typesense:",
+                        "    api_url: '%env(CABINET_TYPESENSE_API_URL)%'",
+                        "    api_key: '%env(CABINET_TYPESENSE_API_KEY)%'",
+                        "  authorization:",
+                        "    roles:",
+                        "        ROLE_USER: 'true'",
+                        "  blob_library:",
+                        "    bucket_identifier: \"%env(CABINET_BLOB_BUCKET_ID)%\"",
+                        "    use_http_mode: false",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "71c5022aebb65bf7d3013ca30507b6ec3bc52ba7"
+        }
+    }
+}

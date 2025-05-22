@@ -29,7 +29,8 @@
             "0.1"
         ],
         "dbp/relay-cabinet-bundle": [
-            "0.0"
+            "0.0",
+            "0.3"
         ],
         "dbp/relay-cabinet-connector-campusonline-bundle": [
             "0.1"
