@@ -24,7 +24,7 @@
                 "config/packages/dbp_relay_mono_connector_payone.yaml": {
                     "contents": [
                         "dbp_relay_mono_connector_payone:",
-                        "  database_url: '%env(MONO_CONNECTOR_PAYUNITY_DATABASE_URL)%'",
+                        "  database_url: '%env(MONO_CONNECTOR_PAYONE_DATABASE_URL)%'",
                         "  payment_contracts:",
                         "    payone_contract:",
                         "      api_url: \"%env(resolve:MONO_CONNECTOR_PAYONE_API_URL)%\"",
@@ -41,7 +41,7 @@
                     "executable": false
                 }
             },
-            "ref": "38e9190c110f3a52c0ca84cb1207c6d03dbf2811"
+            "ref": "907d405bfa4e4d03d35f7ff8297920c53aee5683"
         }
     }
 }
