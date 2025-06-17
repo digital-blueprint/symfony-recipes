@@ -1,0 +1,17 @@
+{
+    "bundles": {
+        "Dbp\\Relay\\MonoConnectorPayoneBundle\\DbpRelayMonoConnectorPayoneBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "MONO_CONNECTOR_PAYONE_DATABASE_URL": "mysql://user:secret@mariadb:3306/db?serverVersion=mariadb-10.3.30",
+        "MONO_CONNECTOR_PAYONE_API_URL": "",
+        "MONO_CONNECTOR_PAYONE_MERCHANT_ID": "",
+        "MONO_CONNECTOR_PAYONE_API_KEY_ID": "",
+        "MONO_CONNECTOR_PAYONE_API_SECRET": "",
+        "MONO_CONNECTOR_PAYONE_WEBHOOK_ID": "",
+        "MONO_CONNECTOR_PAYONE_WEBHOOK_SECRET": ""
+    }
+}
