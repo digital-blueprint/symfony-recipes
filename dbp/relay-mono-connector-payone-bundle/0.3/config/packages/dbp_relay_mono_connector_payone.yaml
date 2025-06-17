@@ -1,5 +1,5 @@
 dbp_relay_mono_connector_payone:
-  database_url: '%env(MONO_CONNECTOR_PAYUNITY_DATABASE_URL)%'
+  database_url: '%env(MONO_CONNECTOR_PAYONE_DATABASE_URL)%'
   payment_contracts:
     payone_contract:
       api_url: "%env(resolve:MONO_CONNECTOR_PAYONE_API_URL)%"
