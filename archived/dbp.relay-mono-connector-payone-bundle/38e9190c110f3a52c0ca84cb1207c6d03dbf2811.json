@@ -1,0 +1,47 @@
+{
+    "manifests": {
+        "dbp/relay-mono-connector-payone-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Dbp\\Relay\\MonoConnectorPayoneBundle\\DbpRelayMonoConnectorPayoneBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "MONO_CONNECTOR_PAYONE_DATABASE_URL": "mysql://user:secret@mariadb:3306/db?serverVersion=mariadb-10.3.30",
+                    "MONO_CONNECTOR_PAYONE_API_URL": "",
+                    "MONO_CONNECTOR_PAYONE_MERCHANT_ID": "",
+                    "MONO_CONNECTOR_PAYONE_API_KEY_ID": "",
+                    "MONO_CONNECTOR_PAYONE_API_SECRET": "",
+                    "MONO_CONNECTOR_PAYONE_WEBHOOK_ID": "",
+                    "MONO_CONNECTOR_PAYONE_WEBHOOK_SECRET": ""
+                }
+            },
+            "files": {
+                "config/packages/dbp_relay_mono_connector_payone.yaml": {
+                    "contents": [
+                        "dbp_relay_mono_connector_payone:",
+                        "  database_url: '%env(MONO_CONNECTOR_PAYUNITY_DATABASE_URL)%'",
+                        "  payment_contracts:",
+                        "    payone_contract:",
+                        "      api_url: \"%env(resolve:MONO_CONNECTOR_PAYONE_API_URL)%\"",
+                        "      api_key_id: \"%env(MONO_CONNECTOR_PAYONE_API_KEY_ID)%\"",
+                        "      api_secret: \"%env(MONO_CONNECTOR_PAYONE_API_SECRET)%\"",
+                        "      merchant_id: \"%env(MONO_CONNECTOR_PAYONE_MERCHANT_ID)%\"",
+                        "      webhook_id: \"%env(MONO_CONNECTOR_PAYONE_WEBHOOK_ID)%\"",
+                        "      webhook_secret: \"%env(MONO_CONNECTOR_PAYONE_WEBHOOK_SECRET)%\"",
+                        "      payment_methods:",
+                        "        creditcard:",
+                        "          products: ['MasterCard', 'VISA']",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "38e9190c110f3a52c0ca84cb1207c6d03dbf2811"
+        }
+    }
+}
