@@ -1,0 +1,4 @@
+dbp_relay_base_publication_connector_pure:
+    pure:
+      api_url: "%env(PUBLICATION_PURE_API_URL)%"
+      api_key: "%env(PUBLICATION_PURE_API_KEY)%"
