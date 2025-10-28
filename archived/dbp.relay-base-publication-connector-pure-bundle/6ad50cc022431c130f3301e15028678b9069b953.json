@@ -1,0 +1,33 @@
+{
+    "manifests": {
+        "dbp/relay-base-publication-connector-pure-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Dbp\\Relay\\BasePublicationConnectorPureBundle\\DbpRelayBasePublicationConnectorPureBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "PUBLICATION_PURE_API_URL": "",
+                    "PUBLICATION_PURE_API_KEY": ""
+                }
+            },
+            "files": {
+                "config/packages/dbp_relay_base_publication_connector_pure.yaml": {
+                    "contents": [
+                        "dbp_relay_base_publication_connector_pure:",
+                        "    pure:",
+                        "      api_url: \"%env(PUBLICATION_PURE_API_URL)%\"",
+                        "      api_key: \"%env(PUBLICATION_PURE_API_KEY)%\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "6ad50cc022431c130f3301e15028678b9069b953"
+        }
+    }
+}
