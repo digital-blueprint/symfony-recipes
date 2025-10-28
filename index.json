@@ -22,6 +22,9 @@
             "0.4",
             "0.5"
         ],
+        "dbp/relay-base-publication-connector-pure-bundle": [
+            "0.1"
+        ],
         "dbp/relay-blob-bundle": [
             "0.1"
         ],
