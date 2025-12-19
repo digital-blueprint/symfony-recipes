@@ -7,6 +7,9 @@
         "dbp/relay-authorization-bundle": [
             "0.1"
         ],
+        "dbp/relay-base-course-connector-campusonline-bundle": [
+            "0.1"
+        ],
         "dbp/relay-base-organization-bundle": [
             "0.2"
         ],

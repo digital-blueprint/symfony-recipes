@@ -1,0 +1,34 @@
+{
+    "manifests": {
+        "dbp/relay-base-course-connector-campusonline-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Dbp\\Relay\\BaseCourseConnectorCampusonlineBundle\\DbpRelayBaseCourseConnectorCampusonlineBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "CAMPUS_ONLINE_API_TOKEN": "",
+                    "CAMPUS_ONLINE_API_URL": "",
+                    "ORGANIZATION_ROOT_ID": ""
+                }
+            },
+            "files": {
+                "config/packages/dbp_relay_base_course_connector_campusonline.yaml": {
+                    "contents": [
+                        "dbp_relay_base_course_connector_campusonline:",
+                        "  campus_online:",
+                        "    api_token: '%env(CAMPUS_ONLINE_API_TOKEN)%'",
+                        "    api_url: '%env(CAMPUS_ONLINE_API_URL)%'",
+                        "    org_root_id: '%env(ORGANIZATION_ROOT_ID)%'"
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "22f615b0c1da133adc6b7052e3b1b15de078525c"
+        }
+    }
+}
