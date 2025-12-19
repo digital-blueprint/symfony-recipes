@@ -1,0 +1,5 @@
+dbp_relay_base_course_connector_campusonline:
+  campus_online:
+    api_token: '%env(CAMPUS_ONLINE_API_TOKEN)%'
+    api_url: '%env(CAMPUS_ONLINE_API_URL)%'
+    org_root_id: '%env(ORGANIZATION_ROOT_ID)%'
