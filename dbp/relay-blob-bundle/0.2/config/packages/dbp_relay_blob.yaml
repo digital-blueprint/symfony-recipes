@@ -1,0 +1,28 @@
+dbp_relay_blob:
+  database_url: '%env(BLOB_DATABASE_URL)%'
+  reporting_interval: '%env(BLOB_REPORTING_INTERVAL)%'
+  cleanup_interval: '*/5 * * * *'
+  additional_auth: false # no credential flow or other additional auth check required
+  filedata_schema: "%kernel.project_dir%/vendor/dbp/relay-blob-bundle/src/Resources/filedata-v1.schema.json"
+  file_integrity_checks: false # if file integrity checks should be performed periodically
+  integrity_check_interval: "0 0 1 * *" # when integrity check cronjob should run
+  bucket_size_check_interval: "0 2 * * 1" # when bucket size check cronjob should run
+  quota_warning_interval: "0 7 * * *" # when bucket quota should be checked and if needed warning emails should be sent
+  buckets:
+      test_bucket:
+          service: 'Dbp\Relay\BlobConnectorFilesystemBundle\Service\FilesystemService'
+          internal_bucket_id: '018e0ed8-e6d7-794f-8f60-42efe27ef49e'
+          bucket_id: 'test-bucket'
+          key: 'oaYdaVWxSF8qSk73ewCMQktKhvriYSxvPBudrUQ5qSmFt334FfebTfmQZmFLaruB'
+          quota: 500 # in MB
+          notify_when_quota_over: 70 # in percent of the quota
+          report_when_expiry_in: 'P62D' # in Days, 62 = two 31 day months
+          bucket_owner: 'email@some-mail-server.com'
+          link_expire_time: 'PT1M'
+          output_validation: true
+          reporting:
+              dsn: '%env(BLOB_MAILER_TRANSPORT_DSN)%'
+              from: 'email@some-mail-server.com'
+              to: 'email@some-mail-server.com'
+              subject: 'Blob file deletion reporting'
+              html_template: 'emails/reporting.html.twig'
