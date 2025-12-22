@@ -29,7 +29,8 @@
             "0.1"
         ],
         "dbp/relay-blob-bundle": [
-            "0.1"
+            "0.1",
+            "0.2"
         ],
         "dbp/relay-blob-connector-filesystem-bundle": [
             "0.1"
