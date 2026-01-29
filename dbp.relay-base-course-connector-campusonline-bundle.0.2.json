@@ -1,0 +1,37 @@
+{
+    "manifests": {
+        "dbp/relay-base-course-connector-campusonline-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Dbp\\Relay\\BaseCourseConnectorCampusonlineBundle\\DbpRelayBaseCourseConnectorCampusonlineBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "RELAY_BASE_COURSE_CONNECTOR_CAMPUSONLINE_DATABASE_URL": "mysql://user:secret@mariadb:3306/db",
+                    "RELAY_BASE_COURSE_CONNECTOR_CAMPUSONLINE_CLIENT_ID": "client-id",
+                    "RELAY_BASE_COURSE_CONNECTOR_CAMPUSONLINE_CLIENT_SECRET": "client-secret",
+                    "RELAY_BASE_COURSE_CONNECTOR_CAMPUSONLINE_BASE_URL": "https://campusonline.example.com/api"
+                }
+            },
+            "files": {
+                "config/packages/dbp_relay_base_course_connector_campusonline.yaml": {
+                    "contents": [
+                        "dbp_relay_base_course_connector_campusonline:",
+                        "    database_url: \"%env(RELAY_BASE_COURSE_CONNECTOR_CAMPUSONLINE_DATABASE_URL)%\"",
+                        "    campus_online:",
+                        "        client_id: \"%env(RELAY_BASE_COURSE_CONNECTOR_CAMPUSONLINE_CLIENT_ID)%\"",
+                        "        client_secret: \"%env(RELAY_BASE_COURSE_CONNECTOR_CAMPUSONLINE_CLIENT_SECRET)%\"",
+                        "        base_url: \"%env(RELAY_BASE_COURSE_CONNECTOR_CAMPUSONLINE_BASE_URL)%\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "8a49b50cd29d201eb775702288fca656f1e04240"
+        }
+    }
+}
