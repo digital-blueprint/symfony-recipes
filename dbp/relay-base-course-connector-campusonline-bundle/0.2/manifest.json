@@ -1,0 +1,14 @@
+{
+    "bundles": {
+        "Dbp\\Relay\\BaseCourseConnectorCampusonlineBundle\\DbpRelayBaseCourseConnectorCampusonlineBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "RELAY_BASE_COURSE_CONNECTOR_CAMPUSONLINE_DATABASE_URL": "mysql://user:secret@mariadb:3306/db",
+        "RELAY_BASE_COURSE_CONNECTOR_CAMPUSONLINE_CLIENT_ID": "client-id",
+        "RELAY_BASE_COURSE_CONNECTOR_CAMPUSONLINE_CLIENT_SECRET": "client-secret",
+        "RELAY_BASE_COURSE_CONNECTOR_CAMPUSONLINE_BASE_URL": "https://campusonline.example.com/api"
+    }
+}

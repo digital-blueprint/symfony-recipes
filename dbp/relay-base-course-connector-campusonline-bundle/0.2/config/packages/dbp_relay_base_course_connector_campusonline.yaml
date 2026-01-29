@@ -1,0 +1,6 @@
+dbp_relay_base_course_connector_campusonline:
+    database_url: "%env(RELAY_BASE_COURSE_CONNECTOR_CAMPUSONLINE_DATABASE_URL)%"
+    campus_online:
+        client_id: "%env(RELAY_BASE_COURSE_CONNECTOR_CAMPUSONLINE_CLIENT_ID)%"
+        client_secret: "%env(RELAY_BASE_COURSE_CONNECTOR_CAMPUSONLINE_CLIENT_SECRET)%"
+        base_url: "%env(RELAY_BASE_COURSE_CONNECTOR_CAMPUSONLINE_BASE_URL)%"
