@@ -15,7 +15,8 @@
             "0.2"
         ],
         "dbp/relay-base-organization-connector-campusonline-bundle": [
-            "0.1"
+            "0.1",
+            "0.2"
         ],
         "dbp/relay-base-person-bundle": [
             "0.2"
