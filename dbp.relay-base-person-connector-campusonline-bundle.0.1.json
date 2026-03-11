@@ -1,0 +1,36 @@
+{
+    "manifests": {
+        "dbp/relay-base-person-connector-campusonline-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Dbp\\Relay\\BasePersonConnectorCampusonlineBundle\\DbpRelayBasePersonConnectorCampusonlineBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "BASE_PERSON_CONNECTOR_CAMPUSONLINE_DATABASE_URL": "mysql://user:secret@mariadb:3306/db",
+                    "BASE_PERSON_CONNECTOR_CAMPUSONLINE_CLIENT_ID": "client-id",
+                    "BASE_PERSON_CONNECTOR_CAMPUSONLINE_CLIENT_SECRET": "client-secret",
+                    "BASE_PERSON_CONNECTOR_CAMPUSONLINE_BASE_URL": "https://campusonline.example.com/api"
+                }
+            },
+            "files": {
+                "config/packages/dbp_relay_base_person_connector_campusonline.yaml": {
+                    "contents": [
+                        "dbp_relay_base_person_connector_campusonline:",
+                        "  database_url: '%env(BASE_PERSON_CONNECTOR_CAMPUSONLINE_DATABASE_URL)%'",
+                        "  campus_online:",
+                        "      client_id: \"%env(BASE_PERSON_CONNECTOR_CAMPUSONLINE_CLIENT_ID)%\"",
+                        "      client_secret: \"%env(BASE_PERSON_CONNECTOR_CAMPUSONLINE_CLIENT_SECRET)%\"",
+                        "      base_url: \"%env(BASE_PERSON_CONNECTOR_CAMPUSONLINE_BASE_URL)%\""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "a069ed3f482324528de3583cbed111513c950fc0"
+        }
+    }
+}

@@ -21,6 +21,9 @@
         "dbp/relay-base-person-bundle": [
             "0.2"
         ],
+        "dbp/relay-base-person-connector-campusonline-bundle": [
+            "0.1"
+        ],
         "dbp/relay-base-person-connector-ldap-bundle": [
             "0.1",
             "0.2",
