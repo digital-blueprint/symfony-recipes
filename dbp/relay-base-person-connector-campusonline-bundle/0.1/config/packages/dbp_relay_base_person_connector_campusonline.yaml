@@ -1,0 +1,6 @@
+dbp_relay_base_person_connector_campusonline:
+  database_url: '%env(BASE_PERSON_CONNECTOR_CAMPUSONLINE_DATABASE_URL)%'
+  campus_online:
+      client_id: "%env(BASE_PERSON_CONNECTOR_CAMPUSONLINE_CLIENT_ID)%"
+      client_secret: "%env(BASE_PERSON_CONNECTOR_CAMPUSONLINE_CLIENT_SECRET)%"
+      base_url: "%env(BASE_PERSON_CONNECTOR_CAMPUSONLINE_BASE_URL)%"
