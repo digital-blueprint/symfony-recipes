@@ -8,6 +8,7 @@ dbp_relay_blob:
   integrity_check_interval: "0 0 1 * *" # when integrity check cronjob should run
   bucket_size_check_interval: "0 2 * * 1" # when bucket size check cronjob should run
   quota_warning_interval: "0 7 * * *" # when bucket quota should be checked and if needed warning emails should be sent
+  metadata_size_limit: 1000000
   buckets:
       test_bucket:
           service: 'Dbp\Relay\BlobConnectorFilesystemBundle\Service\FilesystemService'
