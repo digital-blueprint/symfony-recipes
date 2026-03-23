@@ -29,6 +29,7 @@
                         "  integrity_check_interval: \"0 0 1 * *\" # when integrity check cronjob should run",
                         "  bucket_size_check_interval: \"0 2 * * 1\" # when bucket size check cronjob should run",
                         "  quota_warning_interval: \"0 7 * * *\" # when bucket quota should be checked and if needed warning emails should be sent",
+                        "  metadata_size_limit: 1000000",
                         "  buckets:",
                         "      test_bucket:",
                         "          service: 'Dbp\\Relay\\BlobConnectorFilesystemBundle\\Service\\FilesystemService'",
@@ -52,7 +53,7 @@
                     "executable": false
                 }
             },
-            "ref": "c826dfe1cce7a51c8c1dde7a4f61b56b4df6cc7c"
+            "ref": "4f6b4210bad834c22e1405d1394f1dfa519bc34e"
         }
     }
 }
