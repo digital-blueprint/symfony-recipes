@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Dbp\\Relay\\EsignBundle\\DbpRelayEsignBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "PDF_AS_WEB_ADVANCED_URI": "https://pdfas-dev.tugraz.at/pdf-as-web",
+        "PDF_AS_WEB_QUALIFIED_URI": "https://sig-dev.tugraz.at/pdf-as-web"
+    }
+}
