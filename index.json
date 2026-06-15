@@ -122,7 +122,8 @@
             "0.1"
         ],
         "dbp/relay-verity-connector-clamav-bundle": [
-            "0.1"
+            "0.1",
+            "0.3"
         ],
         "dbp/relay-verity-connector-verapdf-bundle": [
             "0.1"
