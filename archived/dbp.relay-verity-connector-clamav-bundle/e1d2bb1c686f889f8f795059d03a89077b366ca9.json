@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "dbp/relay-verity-connector-clamav-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Dbp\\Relay\\VerityConnectorClamavBundle\\DbpRelayVerityConnectorClamavBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "CLAMAV_URI": "localhost:3310"
+                }
+            },
+            "files": {
+                "config/packages/dbp_relay_verity_connector_clamav.yaml": {
+                    "contents": [
+                        "dbp_relay_verity_connector_clamav:",
+                        "    url: '%env(CLAMAV_URI)%'",
+                        "    max_file_size: '30M'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "e1d2bb1c686f889f8f795059d03a89077b366ca9"
+        }
+    }
+}
