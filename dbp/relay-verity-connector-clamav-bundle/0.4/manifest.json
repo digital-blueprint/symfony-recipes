@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Dbp\\Relay\\VerityConnectorClamavBundle\\DbpRelayVerityConnectorClamavBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "CLAMAV_HOST": "localhost",
+        "CLAMAV_PORT": "3310"
+    }
+}

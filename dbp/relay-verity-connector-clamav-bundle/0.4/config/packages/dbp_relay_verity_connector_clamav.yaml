@@ -1,0 +1,4 @@
+dbp_relay_verity_connector_clamav:
+    host: '%env(CLAMAV_HOST)%'
+    port: '%env(CLAMAV_PORT)%'
+    max_file_size: '30M'
