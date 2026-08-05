@@ -6,7 +6,6 @@
         "config/": "%CONFIG_DIR%/"
     },
     "env": {
-        "CLAMAV_HOST": "localhost",
-        "CLAMAV_PORT": "3310"
+        "CLAMAV_HOST": "localhost"
     }
 }
