@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "Dbp\\Relay\\PortfolioBundle\\DbpRelayPortfolioBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "PORTFOLIO_DATABASE_URL": "mysql://user:secret@mariadb:3306/db"
+    }
+}

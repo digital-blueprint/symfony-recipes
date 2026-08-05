@@ -1,0 +1,2 @@
+dbp_relay_portfolio:
+  database_url: '%env(PORTFOLIO_DATABASE_URL)'
