@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "Dbp\\Relay\\SublibraryBundle\\DbpRelaySublibraryBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "SUBLIBRARY_ALMA_API_URL": "https://api-eu.hosted.exlibrisgroup.com",
+        "SUBLIBRARY_ALMA_API_KEY": "",
+        "SUBLIBRARY_ALMA_ANALYTICS_API_KEY": ""
+    }
+}
