@@ -11,8 +11,7 @@
                     "config/": "%CONFIG_DIR%/"
                 },
                 "env": {
-                    "CLAMAV_HOST": "localhost",
-                    "CLAMAV_PORT": "3310"
+                    "CLAMAV_HOST": "localhost"
                 }
             },
             "files": {
@@ -20,14 +19,13 @@
                     "contents": [
                         "dbp_relay_verity_connector_clamav:",
                         "    host: '%env(CLAMAV_HOST)%'",
-                        "    port: '%env(CLAMAV_PORT)%'",
                         "    max_file_size: '30M'",
                         ""
                     ],
                     "executable": false
                 }
             },
-            "ref": "d4922f019ba8354ecd1dd5ae8188b8c5b4820296"
+            "ref": "d5851bf738e53789a6e7b45ff2928cbea637a030"
         }
     }
 }
