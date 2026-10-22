@@ -6,6 +6,7 @@
         "config/": "%CONFIG_DIR%/"
     },
     "env": {
-        "PORTFOLIO_DATABASE_URL": "mysql://user:secret@mariadb:3306/db"
+        "PORTFOLIO_DATABASE_URL": "mysql://user:secret@mariadb:3306/db",
+        "PORTFOLIO_BLOB_BUCKET_ID": ""
     }
 }
