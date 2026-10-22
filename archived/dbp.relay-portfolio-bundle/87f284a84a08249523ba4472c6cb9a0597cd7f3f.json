@@ -1,0 +1,33 @@
+{
+    "manifests": {
+        "dbp/relay-portfolio-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Dbp\\Relay\\PortfolioBundle\\DbpRelayPortfolioBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "PORTFOLIO_DATABASE_URL": "mysql://user:secret@mariadb:3306/db",
+                    "PORTFOLIO_BLOB_BUCKET_ID": ""
+                }
+            },
+            "files": {
+                "config/packages/dbp_relay_portfolio.yaml": {
+                    "contents": [
+                        "dbp_relay_portfolio:",
+                        "  database_url: '%env(PORTFOLIO_DATABASE_URL)'",
+                        "  blob_library:",
+                        "    bucket_identifier: \"%env(PORTFOLIO_BLOB_BUCKET_ID)%\"",
+                        "    use_http_mode: false"
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "87f284a84a08249523ba4472c6cb9a0597cd7f3f"
+        }
+    }
+}
