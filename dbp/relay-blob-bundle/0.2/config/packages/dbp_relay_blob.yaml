@@ -4,8 +4,6 @@ dbp_relay_blob:
   cleanup_interval: '*/5 * * * *'
   additional_auth: false # no credential flow or other additional auth check required
   filedata_schema: "%kernel.project_dir%/vendor/dbp/relay-blob-bundle/src/Resources/filedata-v1.schema.json"
-  file_integrity_checks: false # if file integrity checks should be performed periodically
-  integrity_check_interval: "0 0 1 * *" # when integrity check cronjob should run
   bucket_size_check_interval: "0 2 * * 1" # when bucket size check cronjob should run
   quota_warning_interval: "0 7 * * *" # when bucket quota should be checked and if needed warning emails should be sent
   metadata_size_limit: 1000000
