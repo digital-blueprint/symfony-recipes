@@ -24,6 +24,8 @@
                         "  reporting_interval: '%env(BLOB_REPORTING_INTERVAL)%'",
                         "  cleanup_interval: '*/5 * * * *'",
                         "  additional_auth: false # no credential flow or other additional auth check required",
+                        "  file_integrity_checks: false # if file integrity checks should be performed periodically",
+                        "  integrity_check_interval: \"0 0 1 * *\" # when integrity check cronjob should run",
                         "  bucket_size_check_interval: \"0 2 * * 1\" # when bucket size check cronjob should run",
                         "  quota_warning_interval: \"0 7 * * *\" # when bucket quota should be checked and if needed warning emails should be sent",
                         "  buckets:",
@@ -49,7 +51,7 @@
                     "executable": false
                 }
             },
-            "ref": "f1a6bf710af877098c04d6a0f47f0db6230b5b57"
+            "ref": "b375aa1513d9fe83a77870d488743555b604738a"
         }
     }
 }
